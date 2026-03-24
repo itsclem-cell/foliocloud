@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ — AccessibleMe</title>
+  <meta name="description" content="Frequently asked questions about accessibility, WCAG, our services, and how we work. Plain answers to common questions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .faq-list { list-style:none; padding:0; margin:0; }
+    .faq-item { border-bottom:1px solid var(--border); }
+    .faq-item:first-child { border-top:1px solid var(--border); }
+    .faq-question {
+      all: unset;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 1.5rem 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text);
+      gap: 1.5rem;
+      box-sizing: border-box;
+    }
+    .faq-question:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--brand);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 400;
+      transition: transform .25s ease;
+    }
+    .faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height .35s ease, padding .25s ease;
+      padding-bottom: 0;
+    }
+    .faq-answer.open {
+      max-height: 1000px;
+      padding-bottom: 1.5rem;
+    }
+    .faq-answer-inner p { margin-bottom:.75rem; }
+    .faq-answer-inner p:last-child { margin-bottom:0; }
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="a11y-bar" role="region" aria-label="Accessibility tools">
+  <div class="container">
+    <span class="a11y-bar-label" aria-hidden="true">♿ Accessibility:</span>
+    <div class="a11y-groups">
+      <div class="a11y-group" role="group" aria-label="Colour contrast options">
+        <button class="a11y-btn" id="btn-hc" aria-pressed="false">⬛ High Contrast</button>
+        <button class="a11y-btn" id="btn-hc-yellow" aria-pressed="false">🟡 Yellow/Black</button>
+        <button class="a11y-btn" id="btn-dark" aria-pressed="false">🌙 Dark mode</button>
+      </div>
+      <div class="a11y-group" role="group" aria-label="Text size and font options">
+        <button class="a11y-btn" id="btn-text-lg" aria-pressed="false">A+ Larger text</button>
+        <button class="a11y-btn" id="btn-text-xl" aria-pressed="false">A++ Largest text</button>
+        <button class="a11y-btn" id="btn-readable" aria-pressed="false">𝐀 Readable font</button>
+      </div>
+      <div class="a11y-group" role="group" aria-label="Motion preference">
+        <button class="a11y-btn" id="btn-motion" aria-pressed="false">⏸ Reduce motion</button>
+      </div>
+    </div>
+    <div class="a11y-right">
+      <button class="a11y-features-btn" data-open-a11y-panel aria-haspopup="dialog">♿ Accessibility features</button>
+    </div>
+  </div>
+</div>
+    <div class="a11y-right">
+      <button class="a11y-features-btn" data-open-a11y-panel aria-haspopup="dialog">♿ Accessibility features</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="AccessibleMe — home">
+      <div class="brand-mark" aria-hidden="true">AM</div>
+      <div class="brand-name">AccessibleMe<span class="brand-tag">Accessibility Consultancy</span></div>
+    </a>
+    <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+      <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
+      Menu
+    </button>
+    <nav id="site-nav" class="site-nav" data-nav aria-label="Primary navigation">
+      <div class="nav-close-btn" hidden>
+        <span>AccessibleMe</span>
+        <button data-nav-close aria-label="Close navigation menu" class="panel-close">✕</button>
+      </div>
+      <ul role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="a11yship.html">A11yShip</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content" tabindex="-1">
+
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span aria-current="page">FAQ</span>
+      </nav>
+      <p class="section-kicker">Common questions</p>
+      <h1>Frequently asked questions.</h1>
+      <p class="lead">Plain answers to the questions we get asked most often. Can't find what you need? <a href="contact.html">Get in touch</a>.</p>
+    </div>
+  </div>
+
+  <section aria-labelledby="faq-general-heading">
+    <div class="container" style="max-width:800px;">
+
+      <h2 id="faq-general-heading" style="margin-bottom:2rem;">About accessibility</h2>
+      <ul class="faq-list" role="list">
+
+        <li class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a1">
+            What is WCAG, and why does it matter?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-a1" class="faq-answer" role="region" aria-labelledby="faq-q1">
+            <div class="faq-answer-inner">
+              <p>WCAG stands for Web Content Accessibility Guidelines — the international standard for accessible digital content, published by the W3C. It's organised around four principles (Perceivable, Operable, Understandable, Robust) and covers everything from colour contrast to keyboard navigation to screen reader support.</p>
+              <p>WCAG 2.2 AA is the current benchmark. It matters for legal, commercial, and ethical reasons: in the UK and EU, public sector organisations are legally required to meet it, and the European Accessibility Act is extending those obligations to private sector products and services.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a2">
+            Isn't accessibility just for blind people?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-a2" class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>Absolutely not. Accessibility covers the full range of human ability — including visual, auditory, motor, and cognitive differences. That includes people with dyslexia, ADHD, arthritis, epilepsy, anxiety, and many more conditions that affect how people use digital products.</p>
+              <p>It also includes situational impairments — someone using a phone in bright sunlight, a user with a broken arm, or someone in a noisy environment who can't play audio. Good accessibility improves the experience for everyone.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a3">
+            What's the difference between WCAG A, AA, and AAA?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-a3" class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>WCAG has three levels of conformance: A (minimum), AA (standard target), and AAA (enhanced). Level A covers the most critical barriers — things like providing alt text for images and ensuring keyboard access. Level AA adds important requirements like contrast ratios, captions for live video, and focus visibility.</p>
+              <p>Level AAA covers requirements that can be harder to apply universally — like sign language interpretation for all audio content. Most organisations target AA as their standard, which is also what regulators require.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a4">
+            What is the European Accessibility Act and does it apply to me?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-a4" class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>The European Accessibility Act (EAA) is EU legislation that came into force in June 2025. It requires private sector businesses operating in EU member states to make their products and services — including websites, apps, and self-service kiosks — accessible to disabled users.</p>
+              <p>It applies broadly: financial services, e-commerce, transport, telecoms, media, and more. If your organisation sells to EU customers or operates in any EU country, it almost certainly applies to you. Post-Brexit, UK organisations serving EU markets need to comply too.</p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+
+      <h2 id="faq-services-heading" style="margin-top:4rem; margin-bottom:2rem;">Our services</h2>
+      <ul class="faq-list" role="list" aria-labelledby="faq-services-heading">
+
+        <li class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a5">
+            How long does an accessibility audit take?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-a5" class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>It depends on the scope. A focused audit of a single key user journey — say, a checkout flow or a sign-up process — typically takes 5–10 working days. A comprehensive audit of a large product suite can take 4–8 weeks.</p>
+              <p>As part of our Kickstarter service, we scope the audit together before we start, so you know exactly what you're getting and how long it'll take.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a6">
+            Do you just use automated tools, or do you do manual testing?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-a6" class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>Both, but with a heavy emphasis on manual testing. Automated tools like axe can only catch around 30–40% of WCAG issues — they're great for systematic checks, but they can't tell you whether a screen reader flow actually makes sense, whether focus management feels logical, or whether a form error is genuinely helpful.</p>
+              <p>All our audits include testing with real screen readers (NVDA, JAWS, VoiceOver, TalkBack), keyboard-only navigation, and browser zoom testing. Automation supports our work, but it doesn't replace expertise.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a7">
+            We don't have much budget. Can you still help?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-a7" class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>Yes. Our Kickstarter tier is specifically designed for organisations who are just starting out or working with limited resources. It's a focused engagement — often a single audit, a prioritised report, and a roadmap — that gives you real clarity on where to start without requiring a large commitment.</p>
+              <p>We'd rather help you take one good step in the right direction than overwhelm you with a scope you can't action. <a href="contact.html">Get in touch</a> and we can talk through what's realistic.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a8">
+            What's A11yShip and is it right for my team?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-a8" class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>A11yShip is our gamified accessibility experience — a hands-on learning programme designed to build accessibility knowledge across design, development, and content teams. It uses game mechanics to make complex WCAG concepts approachable, memorable, and even enjoyable.</p>
+              <p>It works well for teams who've struggled to engage with traditional accessibility training, or for organisations that want to build cultural awareness rather than just technical compliance. It's available as a virtual session, in-person workshop, or as part of a longer capability programme. <a href="a11yship.html">Find out more about A11yShip</a>.</p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+
+      <h2 id="faq-process-heading" style="margin-top:4rem; margin-bottom:2rem;">Working with us</h2>
+      <ul class="faq-list" role="list" aria-labelledby="faq-process-heading">
+
+        <li class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a9">
+            What does getting started look like?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-a9" class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>It starts with a conversation. We'll ask you to tell us a bit about your product, your team, your constraints, and what you're trying to achieve. From there, we'll suggest an approach and scope — and if it sounds right, we'll put together a proposal.</p>
+              <p>We don't push people towards bigger engagements than they need. If a small focused audit is right, that's what we'll recommend. <a href="contact.html">Fill in the contact form</a> and we'll be in touch within two working days.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a10">
+            Do you work with teams outside the UK?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-a10" class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>Yes. We work with clients across Europe and beyond. Most of our engagements can be delivered remotely — screen-sharing sessions, async report delivery, video workshops — so location is rarely a barrier.</p>
+              <p>For in-person training (like some A11yShip formats), we can travel to your location or work with you to find a suitable venue.</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-a11">
+            Can you help us after the audit — not just report the issues?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-a11" class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              <p>That's actually our preferred way to work. A report full of issues is only useful if your team knows how to fix them. We offer developer consultancy, design review sessions, and implementation support as part of our Audit &amp; Enablement tier — so we can be hands-on through the remediation process.</p>
+              <p>For teams who want ongoing support, our Sustained Maturity tier provides embedded advisory — joining sprint reviews, running quarterly health checks, and being available for questions as new features are built.</p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </section>
+
+  <section class="cta-band" aria-labelledby="faq-cta-heading">
+    <div class="container" style="text-align:center;">
+      <h2 id="faq-cta-heading">Still have questions?</h2>
+      <p>We're happy to have a no-obligation conversation about your situation.</p>
+      <a href="contact.html" class="btn btn-lg">Get in touch</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Accessibility Features Modal -->
+<div id="a11y-panel" role="dialog" aria-modal="true" aria-labelledby="a11y-panel-title" hidden>
+  <div class="a11y-panel-inner">
+    <div class="a11y-panel-header">
+      <h2 id="a11y-panel-title">Accessibility Features</h2>
+      <button class="panel-close" data-close-a11y-panel aria-label="Close accessibility features panel">✕</button>
+    </div>
+    <div class="a11y-panel-body">
+      <p>This website is built to WCAG 2.2 Level AA. Here is a full inventory of the accessibility features implemented across every page.</p>
+      <h3>Keyboard Navigation</h3>
+      <table><thead><tr><th scope="col">Feature</th><th scope="col">Detail</th><th scope="col">WCAG</th></tr></thead><tbody>
+        <tr><td>Skip link</td><td>First focusable element; visible on focus; jumps to main content</td><td>2.4.1</td></tr>
+        <tr><td>Logical tab order</td><td>Focus follows DOM order throughout all pages</td><td>1.3.2, 2.4.3</td></tr>
+        <tr><td>Focus indicators</td><td>3 px amber outline on all interactive elements</td><td>2.4.11</td></tr>
+        <tr><td>Keyboard-only navigation</td><td>All interactive components operable without a mouse</td><td>2.1.1</td></tr>
+        <tr><td>Accordion keyboard support</td><td>FAQ buttons use Enter/Space; state announced via aria-expanded</td><td>2.1.1</td></tr>
+        <tr><td>No keyboard traps</td><td>Focus managed in modals and mobile nav</td><td>2.1.2</td></tr>
+      </tbody></table>
+      <h3>Screen Reader Support</h3>
+      <table><thead><tr><th scope="col">Feature</th><th scope="col">Detail</th><th scope="col">WCAG</th></tr></thead><tbody>
+        <tr><td>Semantic HTML5</td><td>header, nav, main, section, article, footer landmarks</td><td>1.3.1</td></tr>
+        <tr><td>ARIA labels</td><td>All icons, buttons, links carry aria-label</td><td>4.1.2</td></tr>
+        <tr><td>aria-expanded</td><td>FAQ accordion state announced to screen readers</td><td>4.1.2</td></tr>
+        <tr><td>Live regions</td><td>Form feedback via aria-live="polite"</td><td>4.1.3</td></tr>
+        <tr><td>Dialog roles</td><td>Modals use role="dialog" aria-modal="true"</td><td>4.1.2</td></tr>
+      </tbody></table>
+      <h3>Visual &amp; Typography</h3>
+      <table><thead><tr><th scope="col">Feature</th><th scope="col">Detail</th><th scope="col">WCAG</th></tr></thead><tbody>
+        <tr><td>Colour contrast</td><td>All text meets 4.5:1 minimum</td><td>1.4.3</td></tr>
+        <tr><td>High contrast modes</td><td>B/W and Yellow/Black available</td><td>—</td></tr>
+        <tr><td>Dark mode</td><td>Deep navy background, reduced eye strain</td><td>—</td></tr>
+        <tr><td>Text resize (A+ / A++)</td><td>Increases body text to 120% / 140%</td><td>1.4.4</td></tr>
+        <tr><td>Readable font</td><td>Atkinson Hyperlegible available</td><td>—</td></tr>
+        <tr><td>Reduce motion</td><td>Disables all CSS animations including accordion transitions</td><td>2.3.3</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+</div>
+<div class="a11y-panel-backdrop" id="a11y-backdrop" hidden aria-hidden="true"></div>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie notice" hidden>
+  <div class="cookie-inner">
+    <p><strong>Cookies:</strong> We use essential cookies only. No tracking, no advertising. <a href="cookie-policy.html">Cookie policy</a></p>
+    <div class="cookie-actions">
+      <button id="cookie-accept" class="btn">Accept</button>
+      <button id="cookie-decline" class="btn btn-ghost">Decline</button>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="brand" style="margin-bottom:1rem;">
+        <div class="brand-mark" aria-hidden="true">AM</div>
+        <div class="brand-name" style="color:#fff;">AccessibleMe</div>
+      </div>
+      <p>Inclusive by design.<br>Credible by audit.<br>Practical in delivery.</p>
+      <p style="margin-top:1.5rem;"><a href="mailto:hello@accessibleme.solutions" style="color:var(--accent);">hello@accessibleme.solutions</a></p>
+    </div>
+    <nav aria-label="Services links"><h3>Services</h3><ul role="list">
+      <li><a href="services.html#kickstarter">Kickstarter</a></li>
+      <li><a href="services.html#audit">Audit &amp; Enablement</a></li>
+      <li><a href="services.html#sustained">Sustained Maturity</a></li>
+      <li><a href="a11yship.html">A11yShip</a></li>
+    </ul></nav>
+    <nav aria-label="Company links"><h3>Company</h3><ul role="list">
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul></nav>
+    <nav aria-label="Legal links"><h3>Legal</h3><ul role="list">
+      <li><a href="accessibility-statement.html">Accessibility Statement</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="cookie-policy.html">Cookie Policy</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul></nav>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AccessibleMe. All rights reserved.</p>
+    <p><a href="accessibility-statement.html">WCAG 2.2 AA</a></p>
+  </div>
+</footer>
+
+
+<!-- Chatbot -->
+<button class="chat-launcher" id="chat-launcher" aria-label="Open chat with AccessibleMe" aria-expanded="false" aria-controls="chat-window">
+  <span aria-hidden="true">💬</span>
+  <span class="chat-bubble-label" aria-hidden="true">Chat with us</span>
+</button>
+
+<div class="chat-window" id="chat-window" role="dialog" aria-label="AccessibleMe chat" hidden>
+  <div class="chat-header">
+    <div class="chat-avatar" aria-hidden="true">♿</div>
+    <div class="chat-header-info">
+      <strong>AccessibleMe Assistant</strong>
+      <span>Ask me anything</span>
+    </div>
+    <button class="chat-close" id="chat-close-btn" aria-label="Close chat">✕</button>
+  </div>
+  <div class="chat-messages" id="chat-messages" aria-live="polite" aria-label="Chat messages"></div>
+  <div class="chat-input-row">
+    <label for="chat-input" class="visually-hidden">Type your question</label>
+    <input type="text" id="chat-input" class="chat-input" placeholder="Ask a question..." autocomplete="off">
+    <button class="chat-send" id="chat-send" aria-label="Send message">➤</button>
+  </div>
+  <div class="chat-footer">
+    <button class="chat-human-btn" id="chat-human-btn">👤 Talk to a human</button>
+  </div>
+</div>
+
+<script src="assets/script.js"></script>
+<script>
+  // FAQ Accordion
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      var answerId = this.getAttribute('aria-controls');
+      var answer = document.getElementById(answerId);
+      this.setAttribute('aria-expanded', !expanded);
+      if (expanded) {
+        answer.classList.remove('open');
+      } else {
+        answer.classList.add('open');
+      }
+    });
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+  });
+</script>
+</body>
+</html>

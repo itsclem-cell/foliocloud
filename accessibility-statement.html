@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessibility Statement — AccessibleMe</title>
+  <meta name="description" content="AccessibleMe's accessibility statement — our commitment to WCAG 2.2 AA compliance and the features built into this site.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="a11y-bar" role="region" aria-label="Accessibility tools">
+  <div class="container">
+    <span class="a11y-bar-label" aria-hidden="true">♿ Accessibility:</span>
+    <div class="a11y-groups">
+      <div class="a11y-group" role="group" aria-label="Colour contrast options">
+        <button class="a11y-btn" id="btn-hc" aria-pressed="false">⬛ High Contrast</button>
+        <button class="a11y-btn" id="btn-hc-yellow" aria-pressed="false">🟡 Yellow/Black</button>
+        <button class="a11y-btn" id="btn-dark" aria-pressed="false">🌙 Dark mode</button>
+      </div>
+      <div class="a11y-group" role="group" aria-label="Text size and font options">
+        <button class="a11y-btn" id="btn-text-lg" aria-pressed="false">A+ Larger text</button>
+        <button class="a11y-btn" id="btn-text-xl" aria-pressed="false">A++ Largest text</button>
+        <button class="a11y-btn" id="btn-readable" aria-pressed="false">𝐀 Readable font</button>
+      </div>
+      <div class="a11y-group" role="group" aria-label="Motion preference">
+        <button class="a11y-btn" id="btn-motion" aria-pressed="false">⏸ Reduce motion</button>
+      </div>
+    </div>
+    <div class="a11y-right">
+      <button class="a11y-features-btn" data-open-a11y-panel aria-haspopup="dialog">♿ Accessibility features</button>
+    </div>
+  </div>
+</div>
+    <div class="a11y-right">
+      <button class="a11y-features-btn" data-open-a11y-panel aria-haspopup="dialog">♿ Accessibility features</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="AccessibleMe — home">
+      <div class="brand-mark" aria-hidden="true">AM</div>
+      <div class="brand-name">AccessibleMe<span class="brand-tag">Accessibility Consultancy</span></div>
+    </a>
+    <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+      <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
+      Menu
+    </button>
+    <nav id="site-nav" class="site-nav" data-nav aria-label="Primary navigation">
+      <div class="nav-close-btn" hidden><span>AccessibleMe</span><button data-nav-close class="panel-close" aria-label="Close menu">✕</button></div>
+      <ul role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="a11yship.html">A11yShip</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content" tabindex="-1">
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span aria-current="page">Accessibility Statement</span>
+      </nav>
+      <p class="section-kicker">Trust &amp; transparency</p>
+      <h1>Accessibility Statement</h1>
+      <p class="lead">AccessibleMe is committed to making this website accessible to everyone. This statement explains our commitment, what we've done, what we know still needs doing, and how to contact us if you experience any barriers.</p>
+      <p class="small text-muted" style="margin-top:.75rem;">Last reviewed: March 2026</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container" style="max-width:800px;">
+
+      <div class="notice" style="margin-bottom:2rem;">
+        <p style="margin:0;"><strong>✓ This site is designed to conform to WCAG 2.2 Level AA.</strong> An independent audit is planned and will be documented here when complete. We are not aware of any part of this site that fails to meet the standard at the time of publication.</p>
+      </div>
+
+      <h2 style="font-family:var(--font-display);font-weight:800;margin-top:0;">Our commitment</h2>
+      <p>Accessibility is not an afterthought here — it is the foundation of everything we build and recommend. This website is intentionally built to the same standard we deliver for clients, and we treat it as a live demonstration of what good looks like.</p>
+      <p>We are committed to continuous improvement and to ensuring that as many people as possible can use this site — regardless of disability, neurodivergence, or mental health need.</p>
+
+      <h2 style="font-family:var(--font-display);font-weight:800;">Technical information</h2>
+      <p>This website is built using semantic HTML5, with CSS and vanilla JavaScript. We do not use frameworks that generate inaccessible markup. All JavaScript is progressive enhancement — the site is functional without JS enabled.</p>
+      <p>We have tested this site using:</p>
+      <ul>
+        <li>NVDA screen reader with Firefox (Windows)</li>
+        <li>VoiceOver with Safari (macOS and iOS)</li>
+        <li>TalkBack with Chrome (Android)</li>
+        <li>Keyboard-only navigation across all pages</li>
+        <li>axe DevTools browser extension</li>
+        <li>Colour Contrast Analyser across all colour modes</li>
+        <li>Browser zoom to 200% and 400%</li>
+      </ul>
+
+      <h2 style="font-family:var(--font-display);font-weight:800;">User-controlled accessibility features</h2>
+      <p>The green toolbar at the top of every page provides the following controls, all of which are saved to your browser's local storage so your preferences persist across visits:</p>
+      <table class="feature-table" aria-label="User-controlled accessibility features">
+        <thead>
+          <tr><th scope="col">Control</th><th scope="col">What it does</th><th scope="col">WCAG</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>⬛ High Contrast</td><td>Black background, white text, high-contrast link and button colours</td><td><span class="badge-wcag">1.4.6</span></td></tr>
+          <tr><td>🟡 Yellow/Black</td><td>Yellow text on black — recommended by RNIB for some low-vision users</td><td><span class="badge-wcag">1.4.6</span></td></tr>
+          <tr><td>🌙 Dark Mode</td><td>Low-luminance dark theme reducing eye strain in low-light environments</td><td><span class="badge-wcag">1.4.3</span></td></tr>
+          <tr><td>A+ Text</td><td>Increases font size by approximately 20% without breaking layout</td><td><span class="badge-wcag">1.4.4</span></td></tr>
+          <tr><td>A++ Text</td><td>Increases font size by approximately 40% without breaking layout</td><td><span class="badge-wcag">1.4.4</span></td></tr>
+          <tr><td>𝐀 Readable Font</td><td>Switches to a plainer, highly legible sans-serif typeface (Arial/Verdana)</td><td><span class="badge-wcag">1.4.4</span></td></tr>
+          <tr><td>⏸ Reduce Motion</td><td>Disables all CSS animations and transitions; also responds to OS prefers-reduced-motion setting</td><td><span class="badge-wcag">2.3.3</span></td></tr>
+        </tbody>
+      </table>
+
+      <h2 style="font-family:var(--font-display);font-weight:800;margin-top:2rem;">Known issues and limitations</h2>
+      <p>We are not aware of any current issues that prevent full access to the site's content or functions. However:</p>
+      <ul>
+        <li>An independent WCAG 2.2 Level AA audit is planned but not yet completed. This statement will be updated when audit results are available.</li>
+        <li>Third-party embeds (e.g. video platforms or booking tools) may not be fully within our control. We choose third-party tools with accessibility in mind wherever possible.</li>
+      </ul>
+
+      <h2 style="font-family:var(--font-display);font-weight:800;">How to report a problem</h2>
+      <p>If you experience any difficulty accessing content or functionality on this site, please tell us. We take all accessibility reports seriously and will investigate promptly.</p>
+      <p>You can contact us:</p>
+      <ul>
+        <li><strong>By email:</strong> <a href="mailto:hello@accessibleme.solutions">hello@accessibleme.solutions</a> — please include the page URL and a description of the problem</li>
+        <li><strong>By form:</strong> <a href="contact.html">Use our contact form</a></li>
+      </ul>
+      <p>We aim to respond within 5 working days.</p>
+
+      <h2 style="font-family:var(--font-display);font-weight:800;">Enforcement</h2>
+      <p>If you are not satisfied with our response, you can contact the <a href="https://www.equalityadvisoryservice.com/" rel="external noopener">Equality Advisory and Support Service (EASS)</a>, who provide free advice and support on discrimination and human rights issues.</p>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="AccessibleMe — home">
+          <div class="brand-mark" aria-hidden="true">AM</div>
+          <div class="brand-name" style="color:#fff;">AccessibleMe</div>
+        </a>
+        <p class="footer-tagline">Inclusive by design. Credible by audit. Practical in delivery.</p>
+      </div>
+      <div class="footer-col"><h3>Services</h3><ul role="list"><li><a href="services.html">All Services</a></li><li><a href="a11yship.html">A11yShip</a></li></ul></div>
+      <div class="footer-col"><h3>Company</h3><ul role="list"><li><a href="about.html">About</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h3>Legal</h3><ul role="list"><li><a href="accessibility-statement.html" aria-current="page">Accessibility Statement</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 AccessibleMe. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<div id="a11y-panel-overlay" class="a11y-panel-overlay" role="dialog" aria-modal="true" aria-labelledby="a11y-panel-title" aria-hidden="true">
+  <div class="a11y-panel">
+    <div class="a11y-panel-header">
+      <h2 id="a11y-panel-title">♿ Accessibility Features</h2>
+      <button id="a11y-panel-close" class="panel-close" aria-label="Close">✕</button>
+    </div>
+    <p style="color:var(--text-mid);font-size:var(--step--1);">You're already on the accessibility statement page — the full inventory of features and WCAG criteria is documented above.</p>
+  </div>
+</div>
+
+<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie notice" aria-live="polite">
+  <h3>🍪 Cookie notice</h3>
+  <p>This site uses local storage only to remember your accessibility preferences. No tracking cookies.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-primary btn-sm" data-cookie-choice="accepted">Accept</button>
+    <button class="btn btn-secondary btn-sm" data-cookie-choice="dismissed">Dismiss</button>
+  </div>
+</div>
+
+
+<!-- Chatbot -->
+<button class="chat-launcher" id="chat-launcher" aria-label="Open chat with AccessibleMe" aria-expanded="false" aria-controls="chat-window">
+  <span aria-hidden="true">💬</span>
+  <span class="chat-bubble-label" aria-hidden="true">Chat with us</span>
+</button>
+
+<div class="chat-window" id="chat-window" role="dialog" aria-label="AccessibleMe chat" hidden>
+  <div class="chat-header">
+    <div class="chat-avatar" aria-hidden="true">♿</div>
+    <div class="chat-header-info">
+      <strong>AccessibleMe Assistant</strong>
+      <span>Ask me anything</span>
+    </div>
+    <button class="chat-close" id="chat-close-btn" aria-label="Close chat">✕</button>
+  </div>
+  <div class="chat-messages" id="chat-messages" aria-live="polite" aria-label="Chat messages"></div>
+  <div class="chat-input-row">
+    <label for="chat-input" class="visually-hidden">Type your question</label>
+    <input type="text" id="chat-input" class="chat-input" placeholder="Ask a question..." autocomplete="off">
+    <button class="chat-send" id="chat-send" aria-label="Send message">➤</button>
+  </div>
+  <div class="chat-footer">
+    <button class="chat-human-btn" id="chat-human-btn">👤 Talk to a human</button>
+  </div>
+</div>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resources — AccessibleMe</title>
+  <meta name="description" content="Free accessibility guides, checklists, and tools from AccessibleMe. Practical resources to help your team get accessibility right.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="a11y-bar" role="region" aria-label="Accessibility tools">
+  <div class="container">
+    <span class="a11y-bar-label" aria-hidden="true">♿ Accessibility:</span>
+    <div class="a11y-groups">
+      <div class="a11y-group" role="group" aria-label="Colour contrast options">
+        <button class="a11y-btn" id="btn-hc" aria-pressed="false">⬛ High Contrast</button>
+        <button class="a11y-btn" id="btn-hc-yellow" aria-pressed="false">🟡 Yellow/Black</button>
+        <button class="a11y-btn" id="btn-dark" aria-pressed="false">🌙 Dark mode</button>
+      </div>
+      <div class="a11y-group" role="group" aria-label="Text size and font options">
+        <button class="a11y-btn" id="btn-text-lg" aria-pressed="false">A+ Larger text</button>
+        <button class="a11y-btn" id="btn-text-xl" aria-pressed="false">A++ Largest text</button>
+        <button class="a11y-btn" id="btn-readable" aria-pressed="false">𝐀 Readable font</button>
+      </div>
+      <div class="a11y-group" role="group" aria-label="Motion preference">
+        <button class="a11y-btn" id="btn-motion" aria-pressed="false">⏸ Reduce motion</button>
+      </div>
+    </div>
+    <div class="a11y-right">
+      <button class="a11y-features-btn" data-open-a11y-panel aria-haspopup="dialog">♿ Accessibility features</button>
+    </div>
+  </div>
+</div>
+    <div class="a11y-right">
+      <button class="a11y-features-btn" data-open-a11y-panel aria-haspopup="dialog">♿ Accessibility features</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="AccessibleMe — home">
+      <div class="brand-mark" aria-hidden="true">AM</div>
+      <div class="brand-name">AccessibleMe<span class="brand-tag">Accessibility Consultancy</span></div>
+    </a>
+    <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+      <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
+      Menu
+    </button>
+    <nav id="site-nav" class="site-nav" data-nav aria-label="Primary navigation">
+      <div class="nav-close-btn" hidden>
+        <span>AccessibleMe</span>
+        <button data-nav-close aria-label="Close navigation menu" class="panel-close">✕</button>
+      </div>
+      <ul role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="a11yship.html">A11yShip</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="resources.html" aria-current="page">Resources</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content" tabindex="-1">
+
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span aria-current="page">Resources</span>
+      </nav>
+      <p class="section-kicker">Free resources</p>
+      <h1>Practical tools to help you get accessibility right.</h1>
+      <p class="lead">Checklists, guides, and reference materials — all free, all practical, all from people who actually do this work.</p>
+    </div>
+  </div>
+
+  <!-- Resource categories -->
+  <section aria-labelledby="guides-heading">
+    <div class="container">
+      <h2 id="guides-heading">
+        <span aria-hidden="true">📄</span> Guides &amp; checklists
+      </h2>
+      <div class="grid-3">
+
+        <article class="card card-hover" aria-labelledby="res-wcag-heading">
+          <div style="font-size:2.5rem; margin-bottom:.75rem;" aria-hidden="true">✅</div>
+          <div class="pill pill-brand" style="margin-bottom:.75rem;">Checklist</div>
+          <h3 id="res-wcag-heading">WCAG 2.2 AA Quick Reference Checklist</h3>
+          <p>A practical, plain-English checklist of all WCAG 2.2 AA success criteria — mapped to roles (designer, developer, content, QA). Print-friendly PDF format.</p>
+          <p style="margin-top:1rem;"><a href="contact.html" class="btn btn-ghost" style="font-size:.9rem;">Download free →</a></p>
+        </article>
+
+        <article class="card card-hover" aria-labelledby="res-audit-heading">
+          <div style="font-size:2.5rem; margin-bottom:.75rem;" aria-hidden="true">🔍</div>
+          <div class="pill" style="background:var(--brand-2); color:#fff; margin-bottom:.75rem;">Guide</div>
+          <h3 id="res-audit-heading">How to Run Your First Accessibility Audit</h3>
+          <p>A step-by-step guide covering manual testing, automated tools, screen reader setup, and how to prioritise and report findings. Suitable for beginners.</p>
+          <p style="margin-top:1rem;"><a href="contact.html" class="btn btn-ghost" style="font-size:.9rem;">Download free →</a></p>
+        </article>
+
+        <article class="card card-hover" aria-labelledby="res-eaa-heading">
+          <div style="font-size:2.5rem; margin-bottom:.75rem;" aria-hidden="true">🇪🇺</div>
+          <div class="pill" style="background:var(--accent); color:#fff; margin-bottom:.75rem;">Briefing</div>
+          <h3 id="res-eaa-heading">European Accessibility Act — What You Need to Know</h3>
+          <p>A plain-language briefing on the EAA: who it applies to, what it requires, key deadlines, and how to start preparing. Ideal for compliance and leadership teams.</p>
+          <p style="margin-top:1rem;"><a href="contact.html" class="btn btn-ghost" style="font-size:.9rem;">Download free →</a></p>
+        </article>
+
+        <article class="card card-hover" aria-labelledby="res-design-heading">
+          <div style="font-size:2.5rem; margin-bottom:.75rem;" aria-hidden="true">🎨</div>
+          <div class="pill pill-brand" style="margin-bottom:.75rem;">Guide</div>
+          <h3 id="res-design-heading">Accessible Design Patterns</h3>
+          <p>Common UI components — modals, accordions, forms, navigation — with WCAG-compliant markup examples, keyboard behaviour notes, and ARIA usage guidance.</p>
+          <p style="margin-top:1rem;"><a href="contact.html" class="btn btn-ghost" style="font-size:.9rem;">Download free →</a></p>
+        </article>
+
+        <article class="card card-hover" aria-labelledby="res-colour-heading">
+          <div style="font-size:2.5rem; margin-bottom:.75rem;" aria-hidden="true">🎨</div>
+          <div class="pill" style="background:var(--brand-2); color:#fff; margin-bottom:.75rem;">Reference</div>
+          <h3 id="res-colour-heading">Colour Contrast Reference Card</h3>
+          <p>A quick-reference card with contrast ratios for common colour pairings, plus guidance on tools (Colour Contrast Analyser, WebAIM) and how to apply the WCAG ratios correctly.</p>
+          <p style="margin-top:1rem;"><a href="contact.html" class="btn btn-ghost" style="font-size:.9rem;">Download free →</a></p>
+        </article>
+
+        <article class="card card-hover" aria-labelledby="res-statement-heading">
+          <div style="font-size:2.5rem; margin-bottom:.75rem;" aria-hidden="true">📋</div>
+          <div class="pill" style="background:var(--accent); color:#fff; margin-bottom:.75rem;">Template</div>
+          <h3 id="res-statement-heading">Accessibility Statement Template</h3>
+          <p>A UK-compliant accessibility statement template you can adapt for your own site — including the required sections on compliance status, known issues, and enforcement route.</p>
+          <p style="margin-top:1rem;"><a href="contact.html" class="btn btn-ghost" style="font-size:.9rem;">Download free →</a></p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- External tools -->
+  <section aria-labelledby="tools-heading" style="background:var(--surface-alt); padding:5rem 0;">
+    <div class="container">
+      <h2 id="tools-heading">
+        <span aria-hidden="true">🛠</span> Recommended tools
+      </h2>
+      <p style="max-width:600px; margin-bottom:2.5rem;">These are the tools we use ourselves. All are free or have free tiers, and all are legitimately useful — not just popular.</p>
+      <div class="grid-2" style="gap:2rem;">
+
+        <article class="card" aria-labelledby="tool-axe-heading">
+          <div style="display:flex; gap:1rem; align-items:start;">
+            <div style="font-size:2rem;" aria-hidden="true">🔬</div>
+            <div>
+              <h3 id="tool-axe-heading" style="margin-bottom:.25rem;">axe DevTools (browser extension)</h3>
+              <p style="color:var(--text-muted); font-size:.9rem; margin-bottom:.75rem;">Deque Systems — free extension</p>
+              <p>The industry-standard automated accessibility checker. Run it on any page to catch common WCAG violations. Available for Chrome and Firefox.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="tool-nvda-heading">
+          <div style="display:flex; gap:1rem; align-items:start;">
+            <div style="font-size:2rem;" aria-hidden="true">👁</div>
+            <div>
+              <h3 id="tool-nvda-heading" style="margin-bottom:.25rem;">NVDA Screen Reader</h3>
+              <p style="color:var(--text-muted); font-size:.9rem; margin-bottom:.75rem;">NV Access — free, Windows</p>
+              <p>The most widely-used free screen reader. Essential for testing real-world screen reader behaviour. Use it with Firefox for best results.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="tool-cca-heading">
+          <div style="display:flex; gap:1rem; align-items:start;">
+            <div style="font-size:2rem;" aria-hidden="true">🎨</div>
+            <div>
+              <h3 id="tool-cca-heading" style="margin-bottom:.25rem;">Colour Contrast Analyser</h3>
+              <p style="color:var(--text-muted); font-size:.9rem; margin-bottom:.75rem;">TPGi — free, Windows &amp; Mac</p>
+              <p>Check contrast ratios between foreground and background colours. Works on images and any on-screen element, not just web colours.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="tool-wave-heading">
+          <div style="display:flex; gap:1rem; align-items:start;">
+            <div style="font-size:2rem;" aria-hidden="true">🌊</div>
+            <div>
+              <h3 id="tool-wave-heading" style="margin-bottom:.25rem;">WAVE Evaluation Tool</h3>
+              <p style="color:var(--text-muted); font-size:.9rem; margin-bottom:.75rem;">WebAIM — free, browser extension</p>
+              <p>Visual accessibility checker that overlays errors and warnings directly on your page. Great for getting a quick visual overview of issues.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="tool-bookmarklets-heading">
+          <div style="display:flex; gap:1rem; align-items:start;">
+            <div style="font-size:2rem;" aria-hidden="true">🔖</div>
+            <div>
+              <h3 id="tool-bookmarklets-heading" style="margin-bottom:.25rem;">a11y.css Bookmarklet</h3>
+              <p style="color:var(--text-muted); font-size:.9rem; margin-bottom:.75rem;">Gaël Poupard — free</p>
+              <p>A CSS bookmarklet that highlights accessibility issues directly on-page — missing alt text, empty links, incorrect ARIA, and more. Zero setup required.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" aria-labelledby="tool-voiceover-heading">
+          <div style="display:flex; gap:1rem; align-items:start;">
+            <div style="font-size:2rem;" aria-hidden="true">🍎</div>
+            <div>
+              <h3 id="tool-voiceover-heading" style="margin-bottom:.25rem;">VoiceOver (macOS &amp; iOS)</h3>
+              <p style="color:var(--text-muted); font-size:.9rem; margin-bottom:.75rem;">Apple — built-in, free</p>
+              <p>Apple's built-in screen reader — crucial for iOS testing. Use with Safari on Mac and mobile. ⌘F5 on Mac or triple-tap the home button on iPhone to activate.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Standards & reading -->
+  <section aria-labelledby="reading-heading">
+    <div class="container">
+      <h2 id="reading-heading">
+        <span aria-hidden="true">📚</span> Standards &amp; further reading
+      </h2>
+      <div class="grid-3">
+        <a class="card card-hover" href="https://www.w3.org/TR/WCAG22/" style="text-decoration:none; color:inherit;" target="_blank" rel="noopener noreferrer" aria-label="WCAG 2.2 on W3C website (opens in new tab)">
+          <div style="font-size:2rem; margin-bottom:.75rem;" aria-hidden="true">📐</div>
+          <h3 style="font-size:1rem;">WCAG 2.2 — W3C Official</h3>
+          <p style="font-size:.9rem;">The full Web Content Accessibility Guidelines 2.2 specification. Dense, but authoritative.</p>
+        </a>
+        <a class="card card-hover" href="https://www.w3.org/WAI/WCAG22/quickref/" style="text-decoration:none; color:inherit;" target="_blank" rel="noopener noreferrer" aria-label="WCAG Quick Reference on W3C website (opens in new tab)">
+          <div style="font-size:2rem; margin-bottom:.75rem;" aria-hidden="true">⚡</div>
+          <h3 style="font-size:1rem;">WCAG Quick Reference</h3>
+          <p style="font-size:.9rem;">Filterable, searchable version of WCAG. Filter by level (A/AA/AAA) and technology type.</p>
+        </a>
+        <a class="card card-hover" href="https://www.w3.org/WAI/ARIA/apg/" style="text-decoration:none; color:inherit;" target="_blank" rel="noopener noreferrer" aria-label="ARIA Authoring Practices Guide on W3C website (opens in new tab)">
+          <div style="font-size:2rem; margin-bottom:.75rem;" aria-hidden="true">🎭</div>
+          <h3 style="font-size:1rem;">ARIA Authoring Practices Guide</h3>
+          <p style="font-size:.9rem;">Patterns, examples, and guidance for implementing ARIA correctly. Essential for developers.</p>
+        </a>
+        <a class="card card-hover" href="https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps" style="text-decoration:none; color:inherit;" target="_blank" rel="noopener noreferrer" aria-label="UK accessibility regulations on gov.uk (opens in new tab)">
+          <div style="font-size:2rem; margin-bottom:.75rem;" aria-hidden="true">🏛</div>
+          <h3 style="font-size:1rem;">UK Accessibility Regulations</h3>
+          <p style="font-size:.9rem;">GOV.UK guidance on accessibility requirements for public sector websites and apps.</p>
+        </a>
+        <a class="card card-hover" href="https://webaim.org/" style="text-decoration:none; color:inherit;" target="_blank" rel="noopener noreferrer" aria-label="WebAIM website (opens in new tab)">
+          <div style="font-size:2rem; margin-bottom:.75rem;" aria-hidden="true">🌐</div>
+          <h3 style="font-size:1rem;">WebAIM</h3>
+          <p style="font-size:.9rem;">Excellent articles, tutorials, and tools from the Centre for Persons with Disabilities at Utah State University.</p>
+        </a>
+        <a class="card card-hover" href="https://www.deque.com/blog/" style="text-decoration:none; color:inherit;" target="_blank" rel="noopener noreferrer" aria-label="Deque blog (opens in new tab)">
+          <div style="font-size:2rem; margin-bottom:.75rem;" aria-hidden="true">✍️</div>
+          <h3 style="font-size:1rem;">Deque Blog</h3>
+          <p style="font-size:.9rem;">Practical accessibility articles from the team behind axe. Good mix of technical and strategic content.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section style="background:var(--brand); color:#fff; padding:5rem 0;" aria-labelledby="newsletter-heading">
+    <div class="container" style="max-width:600px; text-align:center;">
+      <div style="font-size:3rem; margin-bottom:1rem;" aria-hidden="true">📬</div>
+      <h2 id="newsletter-heading" style="color:#fff; margin-bottom:1rem;">Get new resources by email</h2>
+      <p style="opacity:.9; margin-bottom:2rem;">We publish new guides, checklists, and tools regularly. Drop your email below and we'll send them straight to you — no spam, unsubscribe any time.</p>
+      <a href="contact.html" class="btn btn-lg" style="background:#fff; color:var(--brand);">Get in touch to subscribe</a>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-labelledby="res-cta-heading">
+    <div class="container" style="text-align:center;">
+      <h2 id="res-cta-heading">Need more than resources?</h2>
+      <p>Resources are a start. If you need real expertise, we're here.</p>
+      <a href="contact.html" class="btn btn-lg">Talk to us</a>
+      <a href="services.html" class="btn btn-ghost btn-lg">Our services</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Accessibility Features Modal -->
+<div id="a11y-panel" role="dialog" aria-modal="true" aria-labelledby="a11y-panel-title" hidden>
+  <div class="a11y-panel-inner">
+    <div class="a11y-panel-header">
+      <h2 id="a11y-panel-title">Accessibility Features</h2>
+      <button class="panel-close" data-close-a11y-panel aria-label="Close accessibility features panel">✕</button>
+    </div>
+    <div class="a11y-panel-body">
+      <p>This website is built to WCAG 2.2 Level AA. Here is a full inventory of the accessibility features implemented across every page.</p>
+      <h3>Keyboard Navigation</h3>
+      <table><thead><tr><th scope="col">Feature</th><th scope="col">Detail</th><th scope="col">WCAG</th></tr></thead><tbody>
+        <tr><td>Skip link</td><td>First focusable element; visible on focus; jumps to main content</td><td>2.4.1</td></tr>
+        <tr><td>Logical tab order</td><td>Focus follows DOM order throughout all pages</td><td>1.3.2, 2.4.3</td></tr>
+        <tr><td>Focus indicators</td><td>3 px amber outline on all interactive elements</td><td>2.4.11</td></tr>
+        <tr><td>Keyboard-only navigation</td><td>All interactive components operable without a mouse</td><td>2.1.1</td></tr>
+        <tr><td>No keyboard traps</td><td>Focus managed in modals and mobile nav</td><td>2.1.2</td></tr>
+      </tbody></table>
+      <h3>Screen Reader Support</h3>
+      <table><thead><tr><th scope="col">Feature</th><th scope="col">Detail</th><th scope="col">WCAG</th></tr></thead><tbody>
+        <tr><td>Semantic HTML5</td><td>header, nav, main, section, article, footer landmarks</td><td>1.3.1</td></tr>
+        <tr><td>ARIA labels</td><td>All icons, buttons, links carry aria-label</td><td>4.1.2</td></tr>
+        <tr><td>Live regions</td><td>Form feedback via aria-live="polite"</td><td>4.1.3</td></tr>
+        <tr><td>Dialog roles</td><td>Modals use role="dialog" aria-modal="true"</td><td>4.1.2</td></tr>
+      </tbody></table>
+      <h3>Visual &amp; Typography</h3>
+      <table><thead><tr><th scope="col">Feature</th><th scope="col">Detail</th><th scope="col">WCAG</th></tr></thead><tbody>
+        <tr><td>Colour contrast</td><td>All text meets 4.5:1 minimum</td><td>1.4.3</td></tr>
+        <tr><td>High contrast modes</td><td>B/W and Yellow/Black available</td><td>—</td></tr>
+        <tr><td>Dark mode</td><td>Deep navy background, reduced eye strain</td><td>—</td></tr>
+        <tr><td>Text resize (A+ / A++)</td><td>Increases body text to 120% / 140%</td><td>1.4.4</td></tr>
+        <tr><td>Readable font</td><td>Atkinson Hyperlegible available</td><td>—</td></tr>
+        <tr><td>Reduce motion</td><td>Disables all CSS animations</td><td>2.3.3</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+</div>
+<div class="a11y-panel-backdrop" id="a11y-backdrop" hidden aria-hidden="true"></div>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie notice" hidden>
+  <div class="cookie-inner">
+    <p><strong>Cookies:</strong> We use essential cookies only. No tracking, no advertising. <a href="cookie-policy.html">Cookie policy</a></p>
+    <div class="cookie-actions">
+      <button id="cookie-accept" class="btn">Accept</button>
+      <button id="cookie-decline" class="btn btn-ghost">Decline</button>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="brand" style="margin-bottom:1rem;">
+        <div class="brand-mark" aria-hidden="true">AM</div>
+        <div class="brand-name" style="color:#fff;">AccessibleMe</div>
+      </div>
+      <p>Inclusive by design.<br>Credible by audit.<br>Practical in delivery.</p>
+      <p style="margin-top:1.5rem;"><a href="mailto:hello@accessibleme.solutions" style="color:var(--accent);">hello@accessibleme.solutions</a></p>
+    </div>
+    <nav aria-label="Services links"><h3>Services</h3><ul role="list">
+      <li><a href="services.html#kickstarter">Kickstarter</a></li>
+      <li><a href="services.html#audit">Audit &amp; Enablement</a></li>
+      <li><a href="services.html#sustained">Sustained Maturity</a></li>
+      <li><a href="a11yship.html">A11yShip</a></li>
+    </ul></nav>
+    <nav aria-label="Company links"><h3>Company</h3><ul role="list">
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul></nav>
+    <nav aria-label="Legal links"><h3>Legal</h3><ul role="list">
+      <li><a href="accessibility-statement.html">Accessibility Statement</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="cookie-policy.html">Cookie Policy</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul></nav>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AccessibleMe. All rights reserved.</p>
+    <p><a href="accessibility-statement.html">WCAG 2.2 AA</a></p>
+  </div>
+</footer>
+
+
+<!-- Chatbot -->
+<button class="chat-launcher" id="chat-launcher" aria-label="Open chat with AccessibleMe" aria-expanded="false" aria-controls="chat-window">
+  <span aria-hidden="true">💬</span>
+  <span class="chat-bubble-label" aria-hidden="true">Chat with us</span>
+</button>
+
+<div class="chat-window" id="chat-window" role="dialog" aria-label="AccessibleMe chat" hidden>
+  <div class="chat-header">
+    <div class="chat-avatar" aria-hidden="true">♿</div>
+    <div class="chat-header-info">
+      <strong>AccessibleMe Assistant</strong>
+      <span>Ask me anything</span>
+    </div>
+    <button class="chat-close" id="chat-close-btn" aria-label="Close chat">✕</button>
+  </div>
+  <div class="chat-messages" id="chat-messages" aria-live="polite" aria-label="Chat messages"></div>
+  <div class="chat-input-row">
+    <label for="chat-input" class="visually-hidden">Type your question</label>
+    <input type="text" id="chat-input" class="chat-input" placeholder="Ask a question..." autocomplete="off">
+    <button class="chat-send" id="chat-send" aria-label="Send message">➤</button>
+  </div>
+  <div class="chat-footer">
+    <button class="chat-human-btn" id="chat-human-btn">👤 Talk to a human</button>
+  </div>
+</div>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
