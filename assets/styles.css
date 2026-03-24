@@ -409,7 +409,9 @@ textarea { min-height:9rem; resize:vertical; }
 /* ── A11y Panel (modal) ─────────────────────────────────── */
 .a11y-panel-overlay {
   display:none; position:fixed; inset:0; z-index:500;
-  background:rgba(0,0,0,.5); backdrop-filter:blur(4px);
+  background:rgba(0,0,0,.5);
+  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
 }
 .a11y-panel-overlay.open { display:flex; align-items:center; justify-content:center; }
 .a11y-panel {
@@ -437,6 +439,8 @@ tr:last-child td { border-bottom:0; }
   position:fixed; left:1rem; bottom:1rem; z-index:300;
   max-width:26rem; background:var(--surface); border:1px solid var(--border);
   border-radius:var(--radius); box-shadow:var(--shadow-lg); padding:1.25rem 1.5rem;
+  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
 }
 .cookie-inner p { font-size:.875rem; color:var(--text-mid); margin:0 0 1rem; }
 .cookie-actions { display:flex; flex-wrap:wrap; gap:.5rem; }
@@ -517,6 +521,9 @@ tr:last-child td { border-bottom:0; }
   border:1px solid var(--border); border-radius:var(--radius-lg);
   box-shadow:var(--shadow-lg); display:flex; flex-direction:column; max-height:530px;
   overflow:hidden;
+  /* Safari: force own stacking context */
+  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
 }
 .chat-window[hidden] { display:none; }
 .chat-header {
@@ -621,63 +628,59 @@ tr:last-child td { border-bottom:0; }
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
   padding:2rem 0;
+  overflow:hidden; /* clip the scrolling track */
 }
 .logo-wall-label {
   text-align:center;
   font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
-  color:var(--text-muted); margin-bottom:1.25rem; padding:0 1rem;
+  color:var(--text-muted); margin-bottom:1.25rem;
 }
-
-/* Desktop: scrolling marquee */
 .logo-track-wrap {
   overflow:hidden; position:relative;
-  mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%);
-  -webkit-mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%);
+  mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);
 }
 .logo-track {
   display:flex; gap:0; width:max-content;
-  will-change:transform; /* GPU layer for smooth scroll */
+  will-change:transform;
 }
+/* No static mobile version — marquee runs everywhere */
+.logo-static { display:none; }
 .lw-item {
-  display:inline-flex; align-items:center; gap:.55rem;
-  padding:.65rem 2rem;
-  font-weight:700; font-size:.88rem; color:var(--text-mid);
-  white-space:nowrap; border-right:1px solid var(--border);
-  transition:color .2s; flex-shrink:0;
+  display:inline-flex; align-items:center;
+  padding:.8rem 2.5rem;
+  font-weight:700; font-size:1.1rem; /* 25% bigger than before */
+  color:var(--text-mid); white-space:nowrap;
+  border-right:1px solid var(--border);
+  letter-spacing:.01em;
+  flex-shrink:0;
 }
 .lw-item:last-child { border-right:none; }
-.lw-item:hover { color:var(--brand); }
-.lw-icon { font-size:1rem; flex-shrink:0; line-height:1; }
 
-/* Mobile: hide marquee, show static pill grid instead */
-.logo-static { display:none; }
-
-@media (max-width:700px) {
-  .logo-track-wrap { display:none; }
-  .logo-static {
-    display:flex; flex-wrap:wrap; gap:.6rem;
-    justify-content:center; padding:0 1rem;
-  }
-  .logo-pill {
-    display:inline-flex; align-items:center; gap:.4rem;
-    background:var(--surface); border:1px solid var(--border);
-    border-radius:999px; padding:.4rem 1rem;
-    font-weight:600; font-size:.8rem; color:var(--text-mid);
-    white-space:nowrap;
-  }
-  .logo-pill-icon { font-size:.9rem; line-height:1; }
+/* Dot separator between items for a premium feel */
+.lw-item::before {
+  content:'·';
+  margin-right:2.5rem;
+  color:var(--border);
+  font-weight:400;
+  font-size:1.4rem;
 }
-
-body.reduce-motion .logo-track { animation:none !important; }
+.lw-item:first-child::before { display:none; }
 
 /* ── ItsClem Popup ──────────────────────────────────────── */
 .itsclem-backdrop {
   position:fixed; inset:0; z-index:600;
-  background:rgba(0,0,0,.45); backdrop-filter:blur(3px);
+  background:rgba(0,0,0,.45);
+  /* No backdrop-filter — causes Safari stacking bugs */
+  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
 }
 .itsclem-popup {
   position:fixed; z-index:601;
-  bottom:2rem; right:2rem;
+  /* Centre on all screens — safe for Safari */
+  top:50%; left:50%;
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
   width:min(340px, calc(100vw - 2rem));
   background:var(--surface);
   border:1px solid var(--border);
