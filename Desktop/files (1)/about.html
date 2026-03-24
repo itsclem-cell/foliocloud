@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us — AccessibleMe</title>
+  <meta name="description" content="AccessibleMe is a specialist accessibility consultancy helping organisations move from compliance risk to genuine inclusive capability.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="a11y-bar" role="region" aria-label="Accessibility tools">
+  <div class="container">
+    <span class="a11y-bar-label" aria-hidden="true">♿ Accessibility:</span>
+    <div class="a11y-groups">
+      <div class="a11y-group" role="group" aria-label="Colour contrast options">
+        <button class="a11y-btn" id="btn-hc" aria-pressed="false">⬛ High Contrast</button>
+        <button class="a11y-btn" id="btn-hc-yellow" aria-pressed="false">🟡 Yellow/Black</button>
+        <button class="a11y-btn" id="btn-dark" aria-pressed="false">🌙 Dark mode</button>
+      </div>
+      <div class="a11y-group" role="group" aria-label="Text size and font options">
+        <button class="a11y-btn" id="btn-text-lg" aria-pressed="false">A+ Larger text</button>
+        <button class="a11y-btn" id="btn-text-xl" aria-pressed="false">A++ Largest text</button>
+        <button class="a11y-btn" id="btn-readable" aria-pressed="false">𝐀 Readable font</button>
+      </div>
+      <div class="a11y-group" role="group" aria-label="Motion preference">
+        <button class="a11y-btn" id="btn-motion" aria-pressed="false">⏸ Reduce motion</button>
+      </div>
+      <div class="a11y-group" role="group" aria-label="Read page aloud">
+        <button class="a11y-btn" id="btn-read-aloud" aria-pressed="false" aria-label="Read page aloud">🔊 Read aloud</button>
+      </div>
+    </div>
+    <div class="a11y-right">
+      <button class="a11y-features-btn" data-open-a11y-panel aria-haspopup="dialog">♿ Accessibility features</button>
+    </div>
+  </div>
+</div>
+    <div class="a11y-right">
+      <button class="a11y-features-btn" data-open-a11y-panel aria-haspopup="dialog">♿ Accessibility features</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="AccessibleMe — home">
+      <div class="brand-mark" aria-hidden="true">AM</div>
+      <div class="brand-name">AccessibleMe<span class="brand-tag">Accessibility Consultancy</span></div>
+    </a>
+    <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+      <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
+      Menu
+    </button>
+    <nav id="site-nav" class="site-nav" data-nav aria-label="Primary navigation">
+      <div class="nav-close-btn" hidden>
+        <span>AccessibleMe</span>
+        <button data-nav-close aria-label="Close navigation menu" class="panel-close">✕</button>
+      </div>
+      <ul role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="a11yship.html">A11yShip</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content" tabindex="-1">
+
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span aria-current="page">About</span>
+      </nav>
+      <p class="section-kicker">Who we are</p>
+      <h1>Accessibility is not a checkbox. It's a capability.</h1>
+      <p class="lead">AccessibleMe is a specialist consultancy. We help organisations move beyond compliance anxiety and towards embedded, confident, inclusive practice.</p>
+    </div>
+  </div>
+
+  <!-- Mission -->
+  <section aria-labelledby="mission-heading" style="background:var(--brand); color:#fff; padding:5rem 0;">
+    <div class="container">
+      <div style="max-width:760px; margin:0 auto; text-align:center;">
+        <p style="font-size:1rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:1rem; opacity:.75;">Our mission</p>
+        <h2 id="mission-heading" style="font-size:clamp(1.75rem,4vw,2.75rem); margin-bottom:1.5rem; color:#fff; font-family:var(--font-display);">To make digital accessibility the norm, not the exception — in every team, every product, every organisation.</h2>
+        <p style="font-size:1.1rem; opacity:.9; line-height:1.7;">We believe accessibility is a fundamental human right. When digital products exclude people, that's not a technical oversight — it's a failure of design thinking. We exist to change that, one organisation at a time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section aria-labelledby="story-heading">
+    <div class="container">
+      <div class="grid-2" style="align-items:start; gap:5rem;">
+        <div>
+          <p class="section-kicker">Our story</p>
+          <h2 id="story-heading">Born from frustration. Built for change.</h2>
+          <p>AccessibleMe was founded because accessibility kept getting treated as an afterthought. A late-stage audit. A compliance tick. A legal liability to manage.</p>
+          <p>We'd seen it too many times — teams who genuinely wanted to do the right thing, but lacked the knowledge, the time, or the organisational support to embed accessibility properly.</p>
+          <p>So we built a consultancy that focuses on the <em>why</em> and <em>how</em> just as much as the <em>what</em>. We don't just report issues — we build the capability in your teams to prevent them.</p>
+          <p>Today, AccessibleMe works with financial services, events, media, and education clients across the UK and beyond — helping them move from reactive remediation to proactive, confident inclusion.</p>
+        </div>
+        <div>
+          <div class="card" style="background:var(--surface-alt); border:none;">
+            <div style="font-size:3rem; margin-bottom:1rem;" aria-hidden="true">💡</div>
+            <h3 style="margin-bottom:.75rem;">Why it matters</h3>
+            <p>Over <strong>16 million people</strong> in the UK live with a disability. Globally, that figure is over 1.3 billion. These are your customers, your employees, your users.</p>
+            <p style="margin-top:1rem;">The <strong>purple pound</strong> — the spending power of disabled people and their households — is estimated at <strong>£274 billion annually</strong> in the UK alone. Inaccessible products don't just fail people. They leave money on the table.</p>
+            <p style="margin-top:1rem;">And with the <strong>European Accessibility Act</strong> coming into force in 2025, regulatory pressure is increasing across every sector.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section aria-labelledby="values-heading" style="background:var(--surface-alt); padding:5rem 0;">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:3rem;">
+        <p class="section-kicker">What we stand for</p>
+        <h2 id="values-heading">Our values</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div style="font-size:2.5rem; margin-bottom:1rem;" aria-hidden="true">🎯</div>
+          <h3>Practical over theoretical</h3>
+          <p>We work in the real world — with real deadlines, real budgets, and real teams. Our guidance is grounded in what actually works in practice, not just what looks good in a WCAG document.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2.5rem; margin-bottom:1rem;" aria-hidden="true">🤝</div>
+          <h3>Partnership, not policing</h3>
+          <p>We're not here to catch you out. We're here to help you succeed. That means working alongside your teams with empathy and respect, meeting people where they are.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2.5rem; margin-bottom:1rem;" aria-hidden="true">📖</div>
+          <h3>Capability-building first</h3>
+          <p>A one-off audit only fixes yesterday's problems. We focus on building the knowledge, processes, and culture so your teams can get it right going forward.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2.5rem; margin-bottom:1rem;" aria-hidden="true">🔬</div>
+          <h3>Evidence-led</h3>
+          <p>Everything we recommend is grounded in standards — WCAG 2.2, EN 301 549, the EAA — and tested with real assistive technology, not just automated tools.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2.5rem; margin-bottom:1rem;" aria-hidden="true">🌍</div>
+          <h3>Human-centred always</h3>
+          <p>Accessibility is about people. We never lose sight of that. Disabled users are not edge cases — they are part of every audience, every product, every team.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2.5rem; margin-bottom:1rem;" aria-hidden="true">🚀</div>
+          <h3>Ambitious for change</h3>
+          <p>We're not satisfied with "good enough." We want to see accessibility become a default expectation — built in from the start, owned by every team, not outsourced to specialists alone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials -->
+  <section aria-labelledby="credentials-heading">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:3rem;">
+        <p class="section-kicker">Expertise you can trust</p>
+        <h2 id="credentials-heading">How we work</h2>
+      </div>
+      <div class="grid-2" style="gap:3rem;">
+        <div class="card">
+          <div style="font-size:2rem; margin-bottom:1rem;" aria-hidden="true">🧪</div>
+          <h3>Testing methodology</h3>
+          <p>We conduct manual audits with real assistive technology — NVDA, JAWS, VoiceOver, TalkBack — alongside automated tools like axe-core and browser extensions. No audit is based on automation alone.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2rem; margin-bottom:1rem;" aria-hidden="true">📋</div>
+          <h3>Standards alignment</h3>
+          <p>All our work is mapped to WCAG 2.2 AA as a minimum. We also advise on EN 301 549 compliance, the European Accessibility Act, and UK Equality Act obligations.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2rem; margin-bottom:1rem;" aria-hidden="true">🎓</div>
+          <h3>Training and enablement</h3>
+          <p>Our consultants are experienced educators as well as technical specialists. We design learning experiences — including A11yShip — that shift culture, not just skills.</p>
+        </div>
+        <div class="card">
+          <div style="font-size:2rem; margin-bottom:1rem;" aria-hidden="true">🏆</div>
+          <h3>Recognised work</h3>
+          <p>Our work has been shortlisted for industry awards and recognised by clients across financial services, events, and technology sectors. We're proud of the impact our partners achieve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band" aria-labelledby="about-cta-heading">
+    <div class="container" style="text-align:center;">
+      <h2 id="about-cta-heading">Ready to start the conversation?</h2>
+      <p>Tell us where you are. We'll help you work out where to go next.</p>
+      <a href="contact.html" class="btn btn-lg">Get in touch</a>
+      <a href="services.html" class="btn btn-ghost btn-lg">Explore services</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Accessibility Features Modal -->
+<div id="a11y-panel" role="dialog" aria-modal="true" aria-labelledby="a11y-panel-title" hidden>
+  <div class="a11y-panel-inner">
+    <div class="a11y-panel-header">
+      <h2 id="a11y-panel-title">Accessibility Features</h2>
+      <button class="panel-close" data-close-a11y-panel aria-label="Close accessibility features panel">✕</button>
+    </div>
+    <div class="a11y-panel-body">
+      <p>This website is built to WCAG 2.2 Level AA. Here is a full inventory of the accessibility features implemented across every page.</p>
+      <h3>Keyboard Navigation</h3>
+      <table>
+        <thead><tr><th scope="col">Feature</th><th scope="col">Detail</th><th scope="col">WCAG</th></tr></thead>
+        <tbody>
+          <tr><td>Skip link</td><td>First focusable element; visible on focus; jumps to main content</td><td>2.4.1</td></tr>
+          <tr><td>Logical tab order</td><td>Focus follows DOM order throughout all pages</td><td>1.3.2, 2.4.3</td></tr>
+          <tr><td>Focus indicators</td><td>3 px amber outline on all interactive elements; never suppressed</td><td>2.4.11</td></tr>
+          <tr><td>Keyboard-only navigation</td><td>All interactive components operable without a mouse</td><td>2.1.1</td></tr>
+          <tr><td>No keyboard traps</td><td>Focus is managed correctly in modal dialogs and mobile nav</td><td>2.1.2</td></tr>
+        </tbody>
+      </table>
+      <h3>Screen Reader Support</h3>
+      <table>
+        <thead><tr><th scope="col">Feature</th><th scope="col">Detail</th><th scope="col">WCAG</th></tr></thead>
+        <tbody>
+          <tr><td>Semantic HTML5</td><td>header, nav, main, section, article, footer landmarks on every page</td><td>1.3.1</td></tr>
+          <tr><td>ARIA labels</td><td>All icons, buttons, and ambiguous links carry descriptive aria-label</td><td>4.1.2</td></tr>
+          <tr><td>aria-current</td><td>Active navigation link marked aria-current="page"</td><td>—</td></tr>
+          <tr><td>Live regions</td><td>Form feedback announced via aria-live="polite"</td><td>4.1.3</td></tr>
+          <tr><td>Dialog roles</td><td>Modals use role="dialog" aria-modal="true" with focus management</td><td>4.1.2</td></tr>
+          <tr><td>Breadcrumbs</td><td>nav landmark with aria-label="Breadcrumb" on all inner pages</td><td>2.4.8</td></tr>
+        </tbody>
+      </table>
+      <h3>Visual Accessibility</h3>
+      <table>
+        <thead><tr><th scope="col">Feature</th><th scope="col">Detail</th><th scope="col">WCAG</th></tr></thead>
+        <tbody>
+          <tr><td>Colour contrast</td><td>All text meets 4.5:1 minimum; large text meets 3:1</td><td>1.4.3</td></tr>
+          <tr><td>High contrast (B/W)</td><td>Black background, white text, yellow links</td><td>—</td></tr>
+          <tr><td>High contrast (yellow)</td><td>Black background, yellow text, white links</td><td>—</td></tr>
+          <tr><td>Dark mode</td><td>Deep navy background, reduced eye strain</td><td>—</td></tr>
+          <tr><td>No colour-only info</td><td>All status/meaning conveyed with text or shape, not colour alone</td><td>1.4.1</td></tr>
+          <tr><td>Zoom to 400%</td><td>No content lost or overlapping at 400% zoom</td><td>1.4.10</td></tr>
+        </tbody>
+      </table>
+      <h3>Typography Controls</h3>
+      <table>
+        <thead><tr><th scope="col">Feature</th><th scope="col">Detail</th><th scope="col">WCAG</th></tr></thead>
+        <tbody>
+          <tr><td>Text resize (A+)</td><td>Increases body text to 120%</td><td>1.4.4</td></tr>
+          <tr><td>Text resize (A++)</td><td>Increases body text to 140%</td><td>1.4.4</td></tr>
+          <tr><td>Readable font</td><td>Switches to Atkinson Hyperlegible — optimised for low vision</td><td>—</td></tr>
+          <tr><td>Line height</td><td>Minimum 1.6 throughout; never compressed</td><td>1.4.12</td></tr>
+        </tbody>
+      </table>
+      <h3>Motion &amp; Interaction</h3>
+      <table>
+        <thead><tr><th scope="col">Feature</th><th scope="col">Detail</th><th scope="col">WCAG</th></tr></thead>
+        <tbody>
+          <tr><td>Reduce motion toggle</td><td>Disables all CSS animations and transitions</td><td>2.3.3</td></tr>
+          <tr><td>prefers-reduced-motion</td><td>OS-level preference respected automatically on load</td><td>2.3.3</td></tr>
+          <tr><td>No autoplay</td><td>No video or audio plays automatically</td><td>1.4.2</td></tr>
+        </tbody>
+      </table>
+      <h3>Forms</h3>
+      <table>
+        <thead><tr><th scope="col">Feature</th><th scope="col">Detail</th><th scope="col">WCAG</th></tr></thead>
+        <tbody>
+          <tr><td>Associated labels</td><td>Every input has an explicit for/id label association</td><td>1.3.1, 3.3.2</td></tr>
+          <tr><td>Inline validation</td><td>Errors shown adjacent to the field with aria-describedby</td><td>3.3.1</td></tr>
+          <tr><td>Autocomplete</td><td>name/email fields carry autocomplete attributes</td><td>1.3.5</td></tr>
+          <tr><td>Error summaries</td><td>Submission errors announced via live region, focus moved to summary</td><td>3.3.3</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="a11y-panel-backdrop" id="a11y-backdrop" hidden aria-hidden="true"></div>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie notice" hidden>
+  <div class="cookie-inner">
+    <p><strong>Cookies:</strong> We use essential cookies only. No tracking, no advertising. <a href="cookie-policy.html">Cookie policy</a></p>
+    <div class="cookie-actions">
+      <button id="cookie-accept" class="btn">Accept</button>
+      <button id="cookie-decline" class="btn btn-ghost">Decline</button>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="brand" style="margin-bottom:1rem;">
+        <div class="brand-mark" aria-hidden="true">AM</div>
+        <div class="brand-name" style="color:#fff;">AccessibleMe</div>
+      </div>
+      <p>Inclusive by design.<br>Credible by audit.<br>Practical in delivery.</p>
+      <p style="margin-top:1.5rem;"><a href="mailto:hello@accessibleme.solutions" style="color:var(--accent);">hello@accessibleme.solutions</a></p>
+    </div>
+    <nav aria-label="Services links">
+      <h3>Services</h3>
+      <ul role="list">
+        <li><a href="services.html#kickstarter">Kickstarter</a></li>
+        <li><a href="services.html#audit">Audit &amp; Enablement</a></li>
+        <li><a href="services.html#sustained">Sustained Maturity</a></li>
+        <li><a href="a11yship.html">A11yShip</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Company links">
+      <h3>Company</h3>
+      <ul role="list">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Legal links">
+      <h3>Legal</h3>
+      <ul role="list">
+        <li><a href="accessibility-statement.html">Accessibility Statement</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AccessibleMe. All rights reserved.</p>
+    <p><a href="accessibility-statement.html">WCAG 2.2 AA</a></p>
+  </div>
+</footer>
+
+
+<!-- Chatbot -->
+<button class="chat-launcher" id="chat-launcher" aria-label="Open chat with AccessibleMe" aria-expanded="false" aria-controls="chat-window">
+  <span aria-hidden="true">💬</span>
+  <span class="chat-bubble-label" aria-hidden="true">Chat with us</span>
+</button>
+
+<div class="chat-window" id="chat-window" role="dialog" aria-label="AccessibleMe chat" hidden>
+  <div class="chat-header">
+    <div class="chat-avatar" aria-hidden="true">♿</div>
+    <div class="chat-header-info">
+      <strong>AccessibleMe Assistant</strong>
+      <span>Ask me anything</span>
+    </div>
+    <button class="chat-close" id="chat-close-btn" aria-label="Close chat">✕</button>
+  </div>
+  <div class="chat-messages" id="chat-messages" aria-live="polite" aria-label="Chat messages"></div>
+  <div class="chat-input-row">
+    <label for="chat-input" class="visually-hidden">Type your question</label>
+    <input type="text" id="chat-input" class="chat-input" placeholder="Ask a question..." autocomplete="off">
+    <button class="chat-send" id="chat-send" aria-label="Send message">➤</button>
+  </div>
+  <div class="chat-footer">
+    <button class="chat-human-btn" id="chat-human-btn">👤 Talk to a human</button>
+  </div>
+</div>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

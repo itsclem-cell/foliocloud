@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Started — AccessibleMe</title>
+  <meta name="description" content="Book your Kickstarter call with AccessibleMe. Thirty minutes, no obligation — leave with clarity on your accessibility priorities.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="a11y-bar" role="region" aria-label="Accessibility tools">
+  <div class="container">
+    <span class="a11y-bar-label" aria-hidden="true">♿ Accessibility:</span>
+    <div class="a11y-groups">
+      <div class="a11y-group" role="group" aria-label="Colour contrast options">
+        <button class="a11y-btn" id="btn-hc" aria-pressed="false">⬛ High Contrast</button>
+        <button class="a11y-btn" id="btn-hc-yellow" aria-pressed="false">🟡 Yellow/Black</button>
+        <button class="a11y-btn" id="btn-dark" aria-pressed="false">🌙 Dark mode</button>
+      </div>
+      <div class="a11y-group" role="group" aria-label="Text size and font options">
+        <button class="a11y-btn" id="btn-text-lg" aria-pressed="false">A+ Larger text</button>
+        <button class="a11y-btn" id="btn-text-xl" aria-pressed="false">A++ Largest text</button>
+        <button class="a11y-btn" id="btn-readable" aria-pressed="false">𝐀 Readable font</button>
+      </div>
+      <div class="a11y-group" role="group" aria-label="Motion preference">
+        <button class="a11y-btn" id="btn-motion" aria-pressed="false">⏸ Reduce motion</button>
+      </div>
+      <div class="a11y-group" role="group" aria-label="Read page aloud">
+        <button class="a11y-btn" id="btn-read-aloud" aria-pressed="false" aria-label="Read page aloud">🔊 Read aloud</button>
+      </div>
+    </div>
+    <div class="a11y-right">
+      <button class="a11y-features-btn" data-open-a11y-panel aria-haspopup="dialog">♿ Accessibility features</button>
+    </div>
+  </div>
+</div>
+    <div class="a11y-right">
+      <button class="a11y-features-btn" data-open-a11y-panel aria-haspopup="dialog">♿ Accessibility features</button>
+    </div>
+  </div>
+</div>
+
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="AccessibleMe — home">
+      <div class="brand-mark" aria-hidden="true">AM</div>
+      <div class="brand-name">AccessibleMe<span class="brand-tag">Accessibility Consultancy</span></div>
+    </a>
+    <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+      <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
+      Menu
+    </button>
+    <nav id="site-nav" class="site-nav" data-nav aria-label="Primary navigation">
+      <div class="nav-close-btn" hidden>
+        <span>AccessibleMe</span>
+        <button data-nav-close aria-label="Close navigation menu" class="panel-close">✕</button>
+      </div>
+      <ul role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="a11yship.html">A11yShip</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="nav-cta" aria-current="page">Get Started</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content" tabindex="-1">
+
+  <div class="page-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span aria-current="page">Get Started</span>
+      </nav>
+      <p class="section-kicker">Book a call</p>
+      <h1>Let's start with a conversation.</h1>
+      <p class="lead">The Kickstarter call is 30 minutes, free, and no-obligation. You'll leave with a clear sense of your accessibility priorities and what a practical programme could look like for your organisation.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;align-items:start;">
+
+        <!-- Contact Info -->
+        <div>
+          <div class="card" style="margin-bottom:1.5rem;">
+            <h2 style="font-family:var(--font-display);font-size:var(--step-1);font-weight:800;margin:0 0 1rem;">What to expect</h2>
+            <ul class="list-check">
+              <li>A 30-minute video or phone call with an accessibility consultant</li>
+              <li>Discussion of your current situation, obligations, and goals</li>
+              <li>An honest view of where your biggest risks and opportunities lie</li>
+              <li>A clear recommendation on which service tier fits best</li>
+              <li>No hard sell — just practical guidance</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin-bottom:1.5rem;">
+            <h2 style="font-family:var(--font-display);font-size:var(--step-1);font-weight:800;margin:0 0 1rem;">Good fit for</h2>
+            <ul class="list-check">
+              <li>Public sector organisations with PSBAR obligations</li>
+              <li>Regulated businesses preparing for EAA compliance</li>
+              <li>L&amp;D and HR teams building accessible learning</li>
+              <li>Digital teams planning WCAG audits</li>
+              <li>Organisations post-complaint or post-audit</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2 style="font-family:var(--font-display);font-size:var(--step-1);font-weight:800;margin:0 0 .75rem;">📞 Other ways to get in touch</h2>
+            <p style="color:var(--text-mid);font-size:var(--step--1);margin:0 0 .5rem;">Prefer to email first?</p>
+            <a href="mailto:hello@accessibleme.solutions" style="font-weight:700;color:var(--brand);">hello@accessibleme.solutions</a>
+            <p class="small text-muted" style="margin-top:.75rem;">We aim to respond within 2 working days.</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="card">
+          <h2 style="font-family:var(--font-display);font-size:var(--step-2);font-weight:800;margin:0 0 .5rem;">Send us a message</h2>
+          <p style="color:var(--text-mid);margin:0 0 1.75rem;">Fill in the form and we'll get back to you within 2 working days to arrange your Kickstarter call.</p>
+
+          <div role="status" aria-live="polite" data-form-live style="display:none;"></div>
+
+          <form data-contact-form novalidate>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="first-name">First name <span class="req" aria-label="required">*</span></label>
+                <input type="text" id="first-name" name="firstName" autocomplete="given-name" data-required aria-required="true" aria-describedby="first-name-error">
+                <div class="form-error" id="first-name-error" data-error-for="firstName" role="alert"></div>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last name <span class="req" aria-label="required">*</span></label>
+                <input type="text" id="last-name" name="lastName" autocomplete="family-name" data-required aria-required="true" aria-describedby="last-name-error">
+                <div class="form-error" id="last-name-error" data-error-for="lastName" role="alert"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Work email address <span class="req" aria-label="required">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" data-required aria-required="true" aria-describedby="email-error email-hint">
+              <div class="form-hint" id="email-hint">We'll use this to send confirmation of your call booking.</div>
+              <div class="form-error" id="email-error" data-error-for="email" role="alert"></div>
+            </div>
+            <div class="form-group">
+              <label for="organisation">Organisation <span class="req" aria-label="required">*</span></label>
+              <input type="text" id="organisation" name="organisation" autocomplete="organization" data-required aria-required="true" aria-describedby="org-error">
+              <div class="form-error" id="org-error" data-error-for="organisation" role="alert"></div>
+            </div>
+            <div class="form-group">
+              <label for="sector">Sector</label>
+              <select id="sector" name="sector" aria-describedby="sector-hint">
+                <option value="">— Select your sector —</option>
+                <option>Public sector / Government</option>
+                <option>Financial services</option>
+                <option>Education / L&amp;D</option>
+                <option>Healthcare</option>
+                <option>Retail / E-commerce</option>
+                <option>Media / Publishing</option>
+                <option>Technology</option>
+                <option>Non-profit / Charity</option>
+                <option>Other</option>
+              </select>
+              <div class="form-hint" id="sector-hint">Helps us prepare relevant context for your call.</div>
+            </div>
+            <div class="form-group">
+              <label for="service-interest">Which service are you most interested in?</label>
+              <select id="service-interest" name="serviceInterest">
+                <option value="">— Not sure yet —</option>
+                <option>Kickstarter (entry-point diagnostic)</option>
+                <option>Audit &amp; Enablement</option>
+                <option>Sustained Maturity support</option>
+                <option>A11yShip experience</option>
+                <option>Multiple / unsure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">What's driving your interest in accessibility right now? <span class="req" aria-label="required">*</span></label>
+              <textarea id="message" name="message" data-required aria-required="true" aria-describedby="message-error message-hint" placeholder="Tell us about your situation — a recent audit finding, a regulatory deadline, a new inclusion initiative, or simply 'we know we need to do something'..."></textarea>
+              <div class="form-hint" id="message-hint">No need for a polished summary — honest context is what helps us most.</div>
+              <div class="form-error" id="message-error" data-error-for="message" role="alert"></div>
+            </div>
+            <div class="notice" style="margin-bottom:1.25rem;">
+              <p class="small" style="margin:0;"><strong>Privacy:</strong> The information you provide will be used only to respond to your enquiry. We do not share your data with third parties. <a href="privacy-policy.html">Read our privacy policy.</a></p>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              Send Message &amp; Request Kickstarter Call
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="AccessibleMe — home">
+          <div class="brand-mark" aria-hidden="true">AM</div>
+          <div class="brand-name" style="color:#fff;">AccessibleMe</div>
+        </a>
+        <p class="footer-tagline">Inclusive by design. Credible by audit. Practical in delivery.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul role="list">
+          <li><a href="services.html">All Services</a></li>
+          <li><a href="a11yship.html">A11yShip</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul role="list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <ul role="list">
+          <li><a href="accessibility-statement.html">Accessibility Statement</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 AccessibleMe. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="a11y-panel-overlay" class="a11y-panel-overlay" role="dialog" aria-modal="true" aria-labelledby="a11y-panel-title" aria-hidden="true">
+  <div class="a11y-panel">
+    <div class="a11y-panel-header">
+      <h2 id="a11y-panel-title">♿ Accessibility Features</h2>
+      <button id="a11y-panel-close" class="panel-close" aria-label="Close">✕</button>
+    </div>
+    <p style="color:var(--text-mid);font-size:var(--step--1);">This site is built to WCAG 2.2 AA standards. <a href="accessibility-statement.html">Read our full accessibility statement</a> for a complete inventory of features and their WCAG criteria.</p>
+  </div>
+</div>
+
+<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie notice" aria-live="polite">
+  <h3>🍪 Cookie notice</h3>
+  <p>This site uses local storage only to remember your accessibility preferences. No tracking cookies.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-primary btn-sm" data-cookie-choice="accepted">Accept</button>
+    <button class="btn btn-secondary btn-sm" data-cookie-choice="dismissed">Dismiss</button>
+  </div>
+</div>
+
+
+<!-- Chatbot -->
+<button class="chat-launcher" id="chat-launcher" aria-label="Open chat with AccessibleMe" aria-expanded="false" aria-controls="chat-window">
+  <span aria-hidden="true">💬</span>
+  <span class="chat-bubble-label" aria-hidden="true">Chat with us</span>
+</button>
+
+<div class="chat-window" id="chat-window" role="dialog" aria-label="AccessibleMe chat" hidden>
+  <div class="chat-header">
+    <div class="chat-avatar" aria-hidden="true">♿</div>
+    <div class="chat-header-info">
+      <strong>AccessibleMe Assistant</strong>
+      <span>Ask me anything</span>
+    </div>
+    <button class="chat-close" id="chat-close-btn" aria-label="Close chat">✕</button>
+  </div>
+  <div class="chat-messages" id="chat-messages" aria-live="polite" aria-label="Chat messages"></div>
+  <div class="chat-input-row">
+    <label for="chat-input" class="visually-hidden">Type your question</label>
+    <input type="text" id="chat-input" class="chat-input" placeholder="Ask a question..." autocomplete="off">
+    <button class="chat-send" id="chat-send" aria-label="Send message">➤</button>
+  </div>
+  <div class="chat-footer">
+    <button class="chat-human-btn" id="chat-human-btn">👤 Talk to a human</button>
+  </div>
+</div>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
