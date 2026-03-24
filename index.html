@@ -33,6 +33,9 @@
       <div class="a11y-group" role="group" aria-label="Motion preference">
         <button class="a11y-btn" id="btn-motion" aria-pressed="false">⏸ Reduce motion</button>
       </div>
+      <div class="a11y-group" role="group" aria-label="Read page aloud">
+        <button class="a11y-btn" id="btn-read-aloud" aria-pressed="false" aria-label="Read page aloud">🔊 Read aloud</button>
+      </div>
     </div>
     <div class="a11y-right">
       <button class="a11y-features-btn" data-open-a11y-panel aria-haspopup="dialog">♿ Accessibility features</button>
@@ -138,21 +141,10 @@
   <!-- Scrolling Logo Wall -->
   <div class="logo-wall" role="region" aria-label="Clients and partners">
     <div class="logo-wall-label">Trusted by teams across finance, government, media, and technology</div>
+
+    <!-- Desktop: JS-driven marquee -->
     <div class="logo-track-wrap" aria-hidden="true">
-      <div class="logo-track">
-        <!-- Set 1 -->
-        <span class="lw-item"><span class="lw-icon">🏦</span>ING</span>
-        <span class="lw-item"><span class="lw-icon">💳</span>Virgin Money</span>
-        <span class="lw-item"><span class="lw-icon">📺</span>CloserStill</span>
-        <span class="lw-item"><span class="lw-icon">🏛</span>HM Government</span>
-        <span class="lw-item"><span class="lw-icon">🏦</span>HSBC</span>
-        <span class="lw-item"><span class="lw-icon">🎬</span>Disney</span>
-        <span class="lw-item"><span class="lw-icon">🤝</span>Same Solutions</span>
-        <span class="lw-item"><span class="lw-icon">🛒</span>JP Commerce</span>
-        <span class="lw-item"><span class="lw-icon">💡</span>ItsClem Consulting</span>
-        <span class="lw-item"><span class="lw-icon">💻</span>Technology</span>
-        <span class="lw-item"><span class="lw-icon">🏦</span>Banking</span>
-        <!-- Set 2 — duplicate for seamless loop -->
+      <div class="logo-track" id="logo-track">
         <span class="lw-item"><span class="lw-icon">🏦</span>ING</span>
         <span class="lw-item"><span class="lw-icon">💳</span>Virgin Money</span>
         <span class="lw-item"><span class="lw-icon">📺</span>CloserStill</span>
@@ -165,6 +157,21 @@
         <span class="lw-item"><span class="lw-icon">💻</span>Technology</span>
         <span class="lw-item"><span class="lw-icon">🏦</span>Banking</span>
       </div>
+    </div>
+
+    <!-- Mobile: static pill grid -->
+    <div class="logo-static" aria-label="Clients and partners">
+      <span class="logo-pill"><span class="logo-pill-icon">🏦</span>ING</span>
+      <span class="logo-pill"><span class="logo-pill-icon">💳</span>Virgin Money</span>
+      <span class="logo-pill"><span class="logo-pill-icon">📺</span>CloserStill</span>
+      <span class="logo-pill"><span class="logo-pill-icon">🏛</span>HM Government</span>
+      <span class="logo-pill"><span class="logo-pill-icon">🏦</span>HSBC</span>
+      <span class="logo-pill"><span class="logo-pill-icon">🎬</span>Disney</span>
+      <span class="logo-pill"><span class="logo-pill-icon">🤝</span>Same Solutions</span>
+      <span class="logo-pill"><span class="logo-pill-icon">🛒</span>JP Commerce</span>
+      <span class="logo-pill"><span class="logo-pill-icon">💡</span>ItsClem Consulting</span>
+      <span class="logo-pill"><span class="logo-pill-icon">💻</span>Technology</span>
+      <span class="logo-pill"><span class="logo-pill-icon">🏦</span>Banking</span>
     </div>
   </div>
 
@@ -637,6 +644,55 @@
 
 <script src="assets/script.js"></script>
 <script>
+/* ── JS Marquee — works on all browsers including mobile Safari ── */
+(function() {
+  var track = document.getElementById('logo-track');
+  if (!track) return;
+  // Don't run on mobile (CSS shows pills instead)
+  if (window.innerWidth <= 700) return;
+  // Respect reduce motion
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // Duplicate items for seamless loop
+  var items = Array.from(track.children);
+  items.forEach(function(item) {
+    track.appendChild(item.cloneNode(true));
+  });
+
+  var speed = 0.5; // px per frame
+  var pos = 0;
+  var halfWidth = 0;
+  var paused = false;
+  var raf;
+
+  function measure() {
+    halfWidth = track.scrollWidth / 2;
+  }
+
+  function step() {
+    if (!paused) {
+      pos += speed;
+      if (pos >= halfWidth) pos = 0;
+      track.style.transform = 'translateX(-' + pos + 'px)';
+    }
+    raf = requestAnimationFrame(step);
+  }
+
+  // Pause on hover
+  track.parentElement.addEventListener('mouseenter', function() { paused = true; });
+  track.parentElement.addEventListener('mouseleave', function() { paused = false; });
+
+  // Stop if reduce motion toggled live
+  document.getElementById('btn-motion') && document.getElementById('btn-motion').addEventListener('click', function() {
+    var reduced = document.body.classList.contains('reduce-motion');
+    if (reduced) { cancelAnimationFrame(raf); track.style.transform = ''; }
+    else { measure(); step(); }
+  });
+
+  measure();
+  step();
+})();
+
 /* ── ItsClem Popup — fires every 60 seconds ─────────────── */
 (function() {
   var popup    = document.getElementById('itsclem-popup');
@@ -666,7 +722,6 @@
     if (e.key === 'Escape' && popup && !popup.hidden) hidePopup();
   });
 
-  /* Show after 5s on first load, then every 60s */
   setTimeout(function() {
     showPopup();
     setInterval(showPopup, 60000);
