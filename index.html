@@ -141,37 +141,20 @@
   <!-- Scrolling Logo Wall -->
   <div class="logo-wall" role="region" aria-label="Clients and partners">
     <div class="logo-wall-label">Trusted by teams across finance, government, media, and technology</div>
-
-    <!-- Desktop: JS-driven marquee -->
     <div class="logo-track-wrap" aria-hidden="true">
       <div class="logo-track" id="logo-track">
-        <span class="lw-item"><span class="lw-icon">🏦</span>ING</span>
-        <span class="lw-item"><span class="lw-icon">💳</span>Virgin Money</span>
-        <span class="lw-item"><span class="lw-icon">📺</span>CloserStill</span>
-        <span class="lw-item"><span class="lw-icon">🏛</span>HM Government</span>
-        <span class="lw-item"><span class="lw-icon">🏦</span>HSBC</span>
-        <span class="lw-item"><span class="lw-icon">🎬</span>Disney</span>
-        <span class="lw-item"><span class="lw-icon">🤝</span>Same Solutions</span>
-        <span class="lw-item"><span class="lw-icon">🛒</span>JP Commerce</span>
-        <span class="lw-item"><span class="lw-icon">💡</span>ItsClem Consulting</span>
-        <span class="lw-item"><span class="lw-icon">💻</span>Technology</span>
-        <span class="lw-item"><span class="lw-icon">🏦</span>Banking</span>
+        <span class="lw-item">ING</span>
+        <span class="lw-item">Virgin Money</span>
+        <span class="lw-item">CloserStill</span>
+        <span class="lw-item">HM Government</span>
+        <span class="lw-item">HSBC</span>
+        <span class="lw-item">Disney</span>
+        <span class="lw-item">Same Solutions</span>
+        <span class="lw-item">JP Commerce</span>
+        <span class="lw-item">ItsClem Consulting</span>
+        <span class="lw-item">Banking</span>
+        <span class="lw-item">Technology</span>
       </div>
-    </div>
-
-    <!-- Mobile: static pill grid -->
-    <div class="logo-static" aria-label="Clients and partners">
-      <span class="logo-pill"><span class="logo-pill-icon">🏦</span>ING</span>
-      <span class="logo-pill"><span class="logo-pill-icon">💳</span>Virgin Money</span>
-      <span class="logo-pill"><span class="logo-pill-icon">📺</span>CloserStill</span>
-      <span class="logo-pill"><span class="logo-pill-icon">🏛</span>HM Government</span>
-      <span class="logo-pill"><span class="logo-pill-icon">🏦</span>HSBC</span>
-      <span class="logo-pill"><span class="logo-pill-icon">🎬</span>Disney</span>
-      <span class="logo-pill"><span class="logo-pill-icon">🤝</span>Same Solutions</span>
-      <span class="logo-pill"><span class="logo-pill-icon">🛒</span>JP Commerce</span>
-      <span class="logo-pill"><span class="logo-pill-icon">💡</span>ItsClem Consulting</span>
-      <span class="logo-pill"><span class="logo-pill-icon">💻</span>Technology</span>
-      <span class="logo-pill"><span class="logo-pill-icon">🏦</span>Banking</span>
     </div>
   </div>
 
@@ -644,88 +627,78 @@
 
 <script src="assets/script.js"></script>
 <script>
-/* ── JS Marquee — works on all browsers including mobile Safari ── */
+/* ── Marquee — works on all screen sizes including mobile Safari ── */
 (function() {
   var track = document.getElementById('logo-track');
   if (!track) return;
-  // Don't run on mobile (CSS shows pills instead)
-  if (window.innerWidth <= 700) return;
-  // Respect reduce motion
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  // Duplicate items for seamless loop
-  var items = Array.from(track.children);
-  items.forEach(function(item) {
+  /* Duplicate items so the loop is seamless */
+  Array.from(track.children).forEach(function(item) {
     track.appendChild(item.cloneNode(true));
   });
 
-  var speed = 0.5; // px per frame
   var pos = 0;
   var halfWidth = 0;
+  var speed = 0.6; /* px per frame — comfortable reading speed */
   var paused = false;
-  var raf;
 
   function measure() {
     halfWidth = track.scrollWidth / 2;
   }
 
-  function step() {
+  function tick() {
     if (!paused) {
       pos += speed;
       if (pos >= halfWidth) pos = 0;
-      track.style.transform = 'translateX(-' + pos + 'px)';
+      track.style.transform = 'translateX(-' + Math.round(pos) + 'px)';
     }
-    raf = requestAnimationFrame(step);
+    requestAnimationFrame(tick);
   }
 
-  // Pause on hover
   track.parentElement.addEventListener('mouseenter', function() { paused = true; });
   track.parentElement.addEventListener('mouseleave', function() { paused = false; });
 
-  // Stop if reduce motion toggled live
-  document.getElementById('btn-motion') && document.getElementById('btn-motion').addEventListener('click', function() {
-    var reduced = document.body.classList.contains('reduce-motion');
-    if (reduced) { cancelAnimationFrame(raf); track.style.transform = ''; }
-    else { measure(); step(); }
-  });
+  /* Re-measure if viewport changes (orientation flip etc) */
+  window.addEventListener('resize', measure);
 
-  measure();
-  step();
+  /* Wait for fonts to load so widths are accurate */
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(function() { measure(); tick(); });
+  } else {
+    window.addEventListener('load', function() { measure(); tick(); });
+  }
 })();
 
-/* ── ItsClem Popup — fires every 60 seconds ─────────────── */
+/* ── ItsClem Popup ── */
 (function() {
   var popup    = document.getElementById('itsclem-popup');
   var backdrop = document.getElementById('itsclem-backdrop');
   var closeBtn = document.getElementById('itsclem-close');
   var lastFocus;
 
-  function showPopup() {
+  function show() {
     if (!popup) return;
     lastFocus = document.activeElement;
-    popup.hidden    = false;
+    popup.hidden = false;
     backdrop.hidden = false;
     document.body.style.overflow = 'hidden';
     closeBtn.focus();
   }
-
-  function hidePopup() {
-    popup.hidden    = true;
+  function hide() {
+    popup.hidden = true;
     backdrop.hidden = true;
     document.body.style.overflow = '';
     if (lastFocus) lastFocus.focus();
   }
 
-  if (closeBtn) closeBtn.addEventListener('click', hidePopup);
-  if (backdrop) backdrop.addEventListener('click', hidePopup);
+  if (closeBtn) closeBtn.addEventListener('click', hide);
+  if (backdrop) backdrop.addEventListener('click', hide);
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && popup && !popup.hidden) hidePopup();
+    if (e.key === 'Escape' && popup && !popup.hidden) hide();
   });
 
-  setTimeout(function() {
-    showPopup();
-    setInterval(showPopup, 60000);
-  }, 5000);
+  setTimeout(function() { show(); setInterval(show, 60000); }, 5000);
 })();
 </script>
 </body>
