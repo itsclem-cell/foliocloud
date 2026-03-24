@@ -135,16 +135,35 @@
     </div>
   </section>
 
-  <!-- Logos / Trust -->
-  <div class="logos-section" role="region" aria-label="Clients and partners">
-    <div class="container">
-      <p class="logos-label">Trusted by teams that need credibility and care</p>
-      <div class="logo-row" role="list">
-        <div class="logo-item" role="listitem">🏦 ING</div>
-        <div class="logo-item" role="listitem">💳 Virgin Money</div>
-        <div class="logo-item" role="listitem">📺 CloserStill Media</div>
-        <div class="logo-item" role="listitem">🤝 Same Solutions</div>
-        <div class="logo-item" role="listitem">🏆 QS Award Shortlist</div>
+  <!-- Scrolling Logo Wall -->
+  <div class="logo-wall" role="region" aria-label="Clients and partners">
+    <div class="logo-wall-label">Trusted by teams across finance, government, media, and technology</div>
+    <div class="logo-track-wrap" aria-hidden="true">
+      <div class="logo-track">
+        <!-- Set 1 -->
+        <span class="lw-item"><span class="lw-icon">🏦</span>ING</span>
+        <span class="lw-item"><span class="lw-icon">💳</span>Virgin Money</span>
+        <span class="lw-item"><span class="lw-icon">📺</span>CloserStill</span>
+        <span class="lw-item"><span class="lw-icon">🏛</span>HM Government</span>
+        <span class="lw-item"><span class="lw-icon">🏦</span>HSBC</span>
+        <span class="lw-item"><span class="lw-icon">🎬</span>Disney</span>
+        <span class="lw-item"><span class="lw-icon">🤝</span>Same Solutions</span>
+        <span class="lw-item"><span class="lw-icon">🛒</span>JP Commerce</span>
+        <span class="lw-item"><span class="lw-icon">💡</span>ItsClem Consulting</span>
+        <span class="lw-item"><span class="lw-icon">💻</span>Technology</span>
+        <span class="lw-item"><span class="lw-icon">🏦</span>Banking</span>
+        <!-- Set 2 — duplicate for seamless loop -->
+        <span class="lw-item"><span class="lw-icon">🏦</span>ING</span>
+        <span class="lw-item"><span class="lw-icon">💳</span>Virgin Money</span>
+        <span class="lw-item"><span class="lw-icon">📺</span>CloserStill</span>
+        <span class="lw-item"><span class="lw-icon">🏛</span>HM Government</span>
+        <span class="lw-item"><span class="lw-icon">🏦</span>HSBC</span>
+        <span class="lw-item"><span class="lw-icon">🎬</span>Disney</span>
+        <span class="lw-item"><span class="lw-icon">🤝</span>Same Solutions</span>
+        <span class="lw-item"><span class="lw-icon">🛒</span>JP Commerce</span>
+        <span class="lw-item"><span class="lw-icon">💡</span>ItsClem Consulting</span>
+        <span class="lw-item"><span class="lw-icon">💻</span>Technology</span>
+        <span class="lw-item"><span class="lw-icon">🏦</span>Banking</span>
       </div>
     </div>
   </div>
@@ -378,6 +397,21 @@
 
 </main>
 
+<!-- ── ItsClem Prototyping Popup ─────────────────────────── -->
+<div id="itsclem-popup" class="itsclem-popup" role="dialog" aria-modal="true" aria-labelledby="itsclem-popup-title" hidden>
+  <div class="itsclem-popup-inner">
+    <div class="itsclem-popup-logo" aria-hidden="true">IC</div>
+    <p class="itsclem-popup-tag" aria-hidden="true">Prototyping by</p>
+    <h2 id="itsclem-popup-title" class="itsclem-popup-title">ItsClem Consulting</h2>
+    <p class="itsclem-popup-body">This site was prototyped and designed by ItsClem Consulting — digital strategy, design, and build for ambitious organisations.</p>
+    <div class="itsclem-popup-actions">
+      <button class="itsclem-close btn btn-ghost btn-sm" id="itsclem-close">Close</button>
+      <a href="https://itsclem.co.uk" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit ItsClem ↗</a>
+    </div>
+  </div>
+</div>
+<div class="itsclem-backdrop" id="itsclem-backdrop" hidden aria-hidden="true"></div>
+
 <!-- ── Footer ─────────────────────────────────────────────── -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
@@ -602,5 +636,42 @@
 </div>
 
 <script src="assets/script.js"></script>
+<script>
+/* ── ItsClem Popup — fires every 60 seconds ─────────────── */
+(function() {
+  var popup    = document.getElementById('itsclem-popup');
+  var backdrop = document.getElementById('itsclem-backdrop');
+  var closeBtn = document.getElementById('itsclem-close');
+  var lastFocus;
+
+  function showPopup() {
+    if (!popup) return;
+    lastFocus = document.activeElement;
+    popup.hidden    = false;
+    backdrop.hidden = false;
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function hidePopup() {
+    popup.hidden    = true;
+    backdrop.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', hidePopup);
+  if (backdrop) backdrop.addEventListener('click', hidePopup);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && popup && !popup.hidden) hidePopup();
+  });
+
+  /* Show after 5s on first load, then every 60s */
+  setTimeout(function() {
+    showPopup();
+    setInterval(showPopup, 60000);
+  }, 5000);
+})();
+</script>
 </body>
 </html>
