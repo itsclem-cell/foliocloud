@@ -573,6 +573,92 @@ tr:last-child td { border-bottom:0; }
   .hero-stats { flex-direction:column; gap:.75rem; }
 }
 
+/* ── Scrolling Logo Wall ────────────────────────────────── */
+.logo-wall {
+  background:var(--bg-warm);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:1.5rem 0;
+  overflow:hidden;
+}
+.logo-wall-label {
+  text-align:center;
+  font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--text-muted); margin-bottom:1.1rem;
+}
+.logo-track-wrap {
+  overflow:hidden;
+  position:relative;
+  /* fade edges */
+  mask-image:linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image:linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+.logo-track {
+  display:flex;
+  gap:0;
+  width:max-content;
+  animation:logo-scroll 32s linear infinite;
+}
+.logo-track:hover { animation-play-state:paused; }
+@keyframes logo-scroll {
+  from { transform:translateX(0); }
+  to   { transform:translateX(-50%); }
+}
+.lw-item {
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.6rem 1.75rem;
+  font-weight:700; font-size:.88rem; color:var(--text-mid);
+  white-space:nowrap;
+  border-right:1px solid var(--border);
+  transition:color .2s;
+}
+.lw-item:hover { color:var(--brand); }
+.lw-icon { font-size:1rem; flex-shrink:0; }
+
+body.reduce-motion .logo-track { animation:none; }
+
+/* ── ItsClem Popup ──────────────────────────────────────── */
+.itsclem-backdrop {
+  position:fixed; inset:0; z-index:600;
+  background:rgba(0,0,0,.45); backdrop-filter:blur(3px);
+}
+.itsclem-popup {
+  position:fixed; z-index:601;
+  bottom:2rem; right:2rem;
+  width:min(340px, calc(100vw - 2rem));
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);
+  padding:1.75rem;
+  animation:popup-in .3s cubic-bezier(.34,1.56,.64,1) both;
+}
+@keyframes popup-in {
+  from { opacity:0; transform:translateY(20px) scale(.96); }
+  to   { opacity:1; transform:translateY(0) scale(1); }
+}
+.itsclem-popup[hidden] { display:none; }
+.itsclem-popup-logo {
+  width:2.75rem; height:2.75rem; border-radius:10px;
+  background:linear-gradient(135deg, var(--brand), var(--brand-2));
+  color:#fff; font-weight:800; font-size:1rem;
+  display:grid; place-items:center; margin-bottom:.85rem;
+}
+.itsclem-popup-tag {
+  font-size:.72rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--text-muted); margin:0 0 .2rem;
+}
+.itsclem-popup-title {
+  font-family:var(--font-display); font-size:1.25rem; font-weight:900;
+  margin:0 0 .75rem; line-height:1.2;
+}
+.itsclem-popup-body {
+  font-size:.88rem; color:var(--text-mid); line-height:1.6; margin:0 0 1.25rem;
+}
+.itsclem-popup-actions {
+  display:flex; gap:.6rem; flex-wrap:wrap;
+}
+
 /* ── Print ──────────────────────────────────────────────── */
 @media print {
   .a11y-bar,.site-header,.cookie-banner,.a11y-panel-overlay,.chat-launcher,.chat-window { display:none !important; }
