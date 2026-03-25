@@ -30,6 +30,9 @@
       <div class="a11y-group" role="group" aria-label="Motion preference">
         <button class="a11y-btn" id="btn-motion" aria-pressed="false">⏸ Reduce motion</button>
       </div>
+      <div class="a11y-group" role="group" aria-label="Read page aloud">
+        <button class="a11y-btn" id="btn-read-aloud" aria-pressed="false" aria-label="Read page aloud">🔊 Read aloud</button>
+      </div>
     </div>
     <div class="a11y-right">
       <button class="a11y-features-btn" data-open-a11y-panel aria-haspopup="dialog">♿ Accessibility features</button>
@@ -97,26 +100,46 @@
   </section>
 
   <!-- Story -->
-  <section aria-labelledby="story-heading">
+  <section aria-labelledby="story-heading" style="padding:5rem 0;">
     <div class="container">
-      <div class="grid-2" style="align-items:start; gap:5rem;">
-        <div>
-          <p class="section-kicker">Our story</p>
-          <h2 id="story-heading">Born from frustration. Built for change.</h2>
-          <p>AccessibleMe was founded because accessibility kept getting treated as an afterthought. A late-stage audit. A compliance tick. A legal liability to manage.</p>
-          <p>We'd seen it too many times — teams who genuinely wanted to do the right thing, but lacked the knowledge, the time, or the organisational support to embed accessibility properly.</p>
-          <p>So we built a consultancy that focuses on the <em>why</em> and <em>how</em> just as much as the <em>what</em>. We don't just report issues — we build the capability in your teams to prevent them.</p>
-          <p>Today, AccessibleMe works with financial services, events, media, and education clients across the UK and beyond — helping them move from reactive remediation to proactive, confident inclusion.</p>
-        </div>
-        <div>
-          <div class="card" style="background:var(--surface-alt); border:none;">
-            <div style="font-size:3rem; margin-bottom:1rem;" aria-hidden="true">💡</div>
-            <h3 style="margin-bottom:.75rem;">Why it matters</h3>
-            <p>Over <strong>16 million people</strong> in the UK live with a disability. Globally, that figure is over 1.3 billion. These are your customers, your employees, your users.</p>
-            <p style="margin-top:1rem;">The <strong>purple pound</strong> — the spending power of disabled people and their households — is estimated at <strong>£274 billion annually</strong> in the UK alone. Inaccessible products don't just fail people. They leave money on the table.</p>
-            <p style="margin-top:1rem;">And with the <strong>European Accessibility Act</strong> coming into force in 2025, regulatory pressure is increasing across every sector.</p>
+
+      <!-- Heading -->
+      <div style="margin-bottom:3.5rem;">
+        <p class="section-kicker">Our story</p>
+        <h2 id="story-heading" style="max-width:600px;">Born from frustration. Built for change.</h2>
+        <p style="max-width:640px; color:var(--text-mid); font-size:1.05rem; line-height:1.7;">AccessibleMe was founded because accessibility kept getting treated as an afterthought — a late-stage audit, a compliance tick, a legal liability to manage.</p>
+      </div>
+
+      <!-- Photo + copy row -->
+      <div class="story-photo-row">
+
+        <!-- Photo with creative frame treatment -->
+        <div class="story-photo-wrap" aria-hidden="true">
+          <div class="story-photo-frame">
+            <img src="assets/team-photo.jpg" alt="The AccessibleMe team at an industry event, standing at the AccessibleMe exhibition stand" class="story-photo-img" width="600" height="450" loading="lazy">
+            <!-- Decorative corner accent -->
+            <div class="story-photo-accent-tl" aria-hidden="true"></div>
+            <div class="story-photo-accent-br" aria-hidden="true"></div>
           </div>
+          <!-- Caption -->
+          <p class="story-photo-caption">The AccessibleMe team at Learning Technologies 2025</p>
         </div>
+
+        <!-- Copy -->
+        <div class="story-copy">
+          <blockquote class="story-pullquote">
+            "We exist to remove the barriers that stop people from learning, working and living fully — by designing access for everyone from the start."
+          </blockquote>
+
+          <p>We help organisations design digital content that works for everyone — through <strong>audits</strong>, <strong>expert support</strong>, and a <strong>structured learning backbone</strong> that helps teams understand, apply, and sustain accessibility over time.</p>
+
+          <p>Our learning backbone ensures accessibility knowledge doesn't sit with one person or disappear after a project ends. It gives teams shared understanding, practical confidence, and ongoing reinforcement — without adding complexity or overwhelm.</p>
+
+          <p>Today, AccessibleMe works with financial services, events, media, and education clients across the UK and beyond — helping them move from reactive remediation to proactive, confident inclusion.</p>
+
+          <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem; display:inline-flex;">Start your journey →</a>
+        </div>
+
       </div>
     </div>
   </section>

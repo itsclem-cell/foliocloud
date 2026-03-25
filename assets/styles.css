@@ -837,6 +837,62 @@ tr:last-child td { border-bottom:0; }
   .maya-banner-text span { display:none; }
 }
 
+/* ── Story photo section ────────────────────────────────── */
+.story-photo-row {
+  display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start;
+}
+.story-photo-wrap { position:relative; }
+.story-photo-frame {
+  position:relative; border-radius:var(--radius-lg); overflow:hidden;
+  /* Diagonal clip for creative edge */
+  clip-path:polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%);
+  box-shadow:0 20px 60px rgba(26,25,24,.18);
+}
+.story-photo-img {
+  width:100%; height:auto; display:block;
+  /* Subtle warm enhancement */
+  filter:contrast(1.04) saturate(1.08);
+  transition:transform .5s ease;
+}
+.story-photo-frame:hover .story-photo-img { transform:scale(1.02); }
+
+/* Green corner accent top-left */
+.story-photo-accent-tl {
+  position:absolute; top:-12px; left:-12px;
+  width:80px; height:80px; border-radius:10px;
+  border-top:4px solid var(--brand); border-left:4px solid var(--brand);
+  pointer-events:none;
+}
+/* Amber corner accent bottom-right — offset from clip */
+.story-photo-accent-br {
+  position:absolute; bottom:24px; right:-12px;
+  width:60px; height:60px; border-radius:10px;
+  border-bottom:4px solid var(--accent); border-right:4px solid var(--accent);
+  pointer-events:none;
+}
+/* Fade overlay at bottom of image */
+.story-photo-frame::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(to bottom, transparent 55%, rgba(26,25,24,.25) 100%);
+  pointer-events:none;
+}
+.story-photo-caption {
+  font-size:.78rem; color:var(--text-muted); font-style:italic;
+  margin-top:.85rem; text-align:center;
+}
+.story-pullquote {
+  font-family:var(--font-display); font-size:clamp(1.1rem,2.2vw,1.4rem);
+  font-weight:900; line-height:1.3; color:var(--brand);
+  border-left:4px solid var(--brand); padding-left:1.25rem;
+  margin:0 0 1.75rem; font-style:normal;
+}
+.story-copy p { color:var(--text-mid); line-height:1.75; margin-bottom:1rem; }
+.story-copy strong { color:var(--text); }
+@media (max-width:860px) {
+  .story-photo-row { grid-template-columns:1fr; gap:2.5rem; }
+  .story-photo-frame { clip-path:polygon(0 0,100% 0,100% 92%,92% 100%,0 100%); }
+}
+
 /* ── Print ──────────────────────────────────────────────── */
 @media print {
   .a11y-bar,.site-header,.cookie-banner,.a11y-panel-overlay,.chat-launcher,.chat-window { display:none !important; }
