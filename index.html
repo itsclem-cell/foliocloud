@@ -77,6 +77,126 @@
   </div>
 </header>
 
+<!-- ── Maya Banner + Panel ────────────────────────────────── -->
+<div class="maya-banner" id="maya-banner" role="region" aria-label="Video explainer">
+  <div class="container maya-banner-inner">
+    <div class="maya-banner-left">
+      <div class="maya-avatar-tiny" aria-hidden="true">
+        <svg viewBox="0 0 60 60" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="29" fill="#EAF3DE"/>
+          <ellipse cx="30" cy="28" rx="13" ry="14" fill="#D4956A"/>
+          <ellipse cx="30" cy="16" rx="15" ry="9" fill="#2C1810"/>
+          <ellipse cx="18" cy="24" rx="5" ry="7" fill="#2C1810"/>
+          <ellipse cx="42" cy="24" rx="5" ry="7" fill="#2C1810"/>
+          <circle cx="25" cy="26" r="3" fill="#fff"/>
+          <circle cx="35" cy="26" r="3" fill="#fff"/>
+          <circle cx="25.5" cy="26.5" r="1.5" fill="#2C1810"/>
+          <circle cx="35.5" cy="26.5" r="1.5" fill="#2C1810"/>
+          <path d="M24 35 Q30 39 36 35" stroke="#8B4513" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <rect x="14" y="40" width="32" height="22" rx="6" fill="#1A5C3A"/>
+        </svg>
+      </div>
+      <div class="maya-banner-text">
+        <strong>Don't want to read all this?</strong>
+        <span>Let Maya explain it in 60 seconds — no reading required.</span>
+      </div>
+    </div>
+    <button class="maya-banner-btn" id="maya-open-btn" aria-expanded="false" aria-controls="maya-panel">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      Watch now
+    </button>
+  </div>
+</div>
+
+<!-- Maya full panel — hidden until triggered -->
+<div class="maya-panel" id="maya-panel" hidden aria-label="Maya video explainer" role="region">
+  <div class="container maya-panel-inner">
+
+    <!-- Avatar column -->
+    <div class="maya-panel-avatar" aria-hidden="true">
+      <svg id="mp-svg" viewBox="0 0 220 260" width="180" height="212" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="110" cy="130" r="105" fill="#EAF3DE"/>
+        <rect x="52" y="175" width="116" height="90" rx="20" fill="#1A5C3A"/>
+        <polygon points="95,175 110,200 125,175" fill="#fff" opacity="0.9"/>
+        <polygon points="52,175 95,175 80,230 52,230" fill="#154f30"/>
+        <polygon points="168,175 125,175 140,230 168,230" fill="#154f30"/>
+        <rect x="100" y="158" width="20" height="22" rx="5" fill="#C68642"/>
+        <ellipse cx="110" cy="130" rx="48" ry="52" fill="#D4956A"/>
+        <ellipse cx="110" cy="85" rx="52" ry="32" fill="#2C1810"/>
+        <ellipse cx="68" cy="105" rx="20" ry="28" fill="#2C1810"/>
+        <ellipse cx="152" cy="105" rx="20" ry="28" fill="#2C1810"/>
+        <ellipse cx="110" cy="78" rx="40" ry="22" fill="#3D2314"/>
+        <circle cx="90" cy="82" r="3" fill="#2C1810"/>
+        <circle cx="110" cy="76" r="4" fill="#2C1810"/>
+        <circle cx="130" cy="82" r="3" fill="#2C1810"/>
+        <circle cx="78" cy="98" r="3" fill="#2C1810"/>
+        <circle cx="142" cy="98" r="3" fill="#2C1810"/>
+        <ellipse cx="63" cy="133" rx="8" ry="10" fill="#C68642"/>
+        <ellipse cx="157" cy="133" rx="8" ry="10" fill="#C68642"/>
+        <circle cx="63" cy="143" r="4" fill="#E07B39"/>
+        <circle cx="157" cy="143" r="4" fill="#E07B39"/>
+        <ellipse cx="92" cy="123" rx="10" ry="8" fill="#fff"/>
+        <ellipse cx="128" cy="123" rx="10" ry="8" fill="#fff"/>
+        <circle cx="93" cy="124" r="5" fill="#2C1810"/>
+        <circle cx="129" cy="124" r="5" fill="#2C1810"/>
+        <circle cx="95" cy="122" r="1.5" fill="#fff"/>
+        <circle cx="131" cy="122" r="1.5" fill="#fff"/>
+        <path d="M83 117 Q86 113 90 116" stroke="#2C1810" stroke-width="1.5" fill="none"/>
+        <path d="M119 117 Q124 113 131 116" stroke="#2C1810" stroke-width="1.5" fill="none"/>
+        <path id="mp-brow-l" d="M82 111 Q92 106 102 110" stroke="#2C1810" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path id="mp-brow-r" d="M118 110 Q128 106 138 111" stroke="#2C1810" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <ellipse cx="110" cy="137" rx="6" ry="4" fill="#B87550"/>
+        <circle cx="104" cy="139" r="3" fill="#B87550"/>
+        <circle cx="116" cy="139" r="3" fill="#B87550"/>
+        <ellipse cx="78" cy="140" rx="10" ry="6" fill="#E8896A" opacity="0.5"/>
+        <ellipse cx="142" cy="140" rx="10" ry="6" fill="#E8896A" opacity="0.5"/>
+        <g>
+          <path id="mp-mouth-smile" d="M97 152 Q110 162 123 152" stroke="#8B4513" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path id="mp-mouth-open" d="M98 151 Q110 166 122 151" stroke="#8B4513" stroke-width="2" fill="#8B3A3A" stroke-linecap="round" opacity="0"/>
+          <ellipse id="mp-mouth-teeth" cx="110" cy="156" rx="9" ry="4" fill="#fff" opacity="0"/>
+        </g>
+        <ellipse cx="78" cy="140" rx="10" ry="6" fill="#E8896A" opacity="0.4"/>
+        <ellipse cx="142" cy="140" rx="10" ry="6" fill="#E8896A" opacity="0.4"/>
+        <rect x="81" y="117" width="24" height="16" rx="5" fill="none" stroke="#444" stroke-width="1.2" opacity="0.45"/>
+        <rect x="115" y="117" width="24" height="16" rx="5" fill="none" stroke="#444" stroke-width="1.2" opacity="0.45"/>
+        <line x1="105" y1="124" x2="115" y2="124" stroke="#444" stroke-width="1.2" opacity="0.45"/>
+        <line x1="81" y1="124" x2="74" y2="122" stroke="#444" stroke-width="1.2" opacity="0.45"/>
+        <line x1="139" y1="124" x2="146" y2="122" stroke="#444" stroke-width="1.2" opacity="0.45"/>
+      </svg>
+    </div>
+
+    <!-- Content column -->
+    <div class="maya-panel-content">
+      <div class="maya-panel-header">
+        <div>
+          <p class="maya-panel-name">Maya <span>· AccessibleMe guide</span></p>
+          <h2 class="maya-panel-title" id="mp-title">Hi! I'm Maya — hit play and I'll explain everything fast.</h2>
+        </div>
+        <button class="maya-close-btn" id="maya-close-btn" aria-label="Close Maya panel">✕</button>
+      </div>
+
+      <div class="maya-tabs" role="group" aria-label="Choose explainer">
+        <button class="maya-tab active" id="mp-tab-consumer" onclick="mpSwitch('consumer')">For individuals</button>
+        <button class="maya-tab" id="mp-tab-enterprise" onclick="mpSwitch('enterprise')">For organisations</button>
+      </div>
+
+      <div class="maya-subtitle" id="mp-subtitle">Click play and I'll take it from here.</div>
+
+      <div class="maya-progress-bar"><div class="maya-progress-fill" id="mp-progress"></div></div>
+
+      <div class="maya-controls">
+        <button class="maya-play-btn" id="mp-play-btn" onclick="mpToggle()">
+          <svg id="mp-play-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <span id="mp-play-label">Play</span>
+        </button>
+        <button class="maya-stop-btn" onclick="mpStop()">Stop</button>
+        <a href="contact.html" class="maya-cta-btn">Book free call →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- ── Main Content ───────────────────────────────────────── -->
 <main id="main-content" tabindex="-1">
 
@@ -700,6 +820,190 @@
 
   setTimeout(function() { show(); setInterval(show, 60000); }, 5000);
 })();
+
+/* ── Maya Panel ─────────────────────────────────────────── */
+(function() {
+  var openBtn  = document.getElementById('maya-open-btn');
+  var closeBtn = document.getElementById('maya-close-btn');
+  var panel    = document.getElementById('maya-panel');
+  var banner   = document.getElementById('maya-banner');
+  if (!openBtn || !panel) return;
+
+  openBtn.addEventListener('click', function() {
+    panel.hidden = false;
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    openBtn.setAttribute('aria-expanded', 'true');
+    closeBtn.focus();
+  });
+
+  closeBtn.addEventListener('click', function() {
+    panel.hidden = true;
+    openBtn.setAttribute('aria-expanded', 'false');
+    mpStop();
+    openBtn.focus();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !panel.hidden) {
+      panel.hidden = true;
+      openBtn.setAttribute('aria-expanded', 'false');
+      mpStop();
+      openBtn.focus();
+    }
+  });
+})();
+
+var MP_SCRIPTS = {
+  consumer: [
+    { t:"Not sure if this is for you?", r:1.05, p:1.25 },
+    { t:"Give me 60 seconds and I'll tell you exactly why it is!", r:1.08, p:1.2 },
+    { pause:550 },
+    { t:"So — if you run a website, sell stuff online, work in a team, or make anything digital —", r:1.0, p:1.1 },
+    { t:"this almost definitely applies to you.", r:0.88, p:1.05 },
+    { pause:500 },
+    { t:"Here's the thing most people don't realise.", r:0.95, p:1.1 },
+    { t:"Accessibility law isn't just for big companies. It covers everyone.", r:0.92, p:1.05 },
+    { pause:400 },
+    { t:"Your site needs to work for people with dyslexia, vision problems, ADHD, motor difficulties.", r:0.95, p:1.05 },
+    { t:"That's about one in five people.", r:0.9, p:1.0 },
+    { t:"If it doesn't work for them — you're losing customers, and you're legally exposed.", r:0.92, p:1.02 },
+    { pause:550 },
+    { t:"The good news? We make this so simple.", r:1.05, p:1.2 },
+    { t:"We tell you what's wrong, how serious it is, and exactly what to fix first.", r:1.0, p:1.15 },
+    { t:"No jargon. No drama. Just a clear plan that actually makes sense.", r:0.98, p:1.1 },
+    { pause:500 },
+    { t:"And here's the part people really don't expect —", r:1.02, p:1.15 },
+    { t:"once your work is certified, you can store it on the blockchain, sell it, or collaborate with someone on it.", r:0.95, p:1.08 },
+    { t:"Whatever you do next — we've already proved it's yours.", r:0.98, p:1.1 },
+    { t:"Timestamped. Legally recognised. Nobody can take that from you.", r:0.93, p:1.05 },
+    { pause:500 },
+    { t:"First chat is completely free. Just thirty minutes.", r:1.0, p:1.15 },
+    { t:"That's genuinely all it takes. Click the button and let's go!", r:1.05, p:1.2 }
+  ],
+  enterprise: [
+    { t:"Hi! I'm Maya — and I'm going to save you some reading.", r:1.05, p:1.2 },
+    { pause:400 },
+    { t:"One in five people have a disability.", r:0.9, p:1.05 },
+    { t:"Dyslexia, ADHD, visual impairments, anxiety — these are your customers, your team, your users.", r:0.93, p:1.05 },
+    { t:"If your digital products don't work for them — you're breaking the law and losing revenue.", r:0.9, p:1.0 },
+    { pause:500 },
+    { t:"AccessibleMe fixes that.", r:1.05, p:1.2 },
+    { t:"We audit your products, train your teams, and give you a prioritised plan that actually gets used.", r:0.95, p:1.08 },
+    { pause:450 },
+    { t:"When your audit is done, you get a Digital Proof Pack.", r:1.0, p:1.15 },
+    { t:"Documents, evidence, and a certificate linked to the blockchain — timestamped and permanently verified.", r:0.93, p:1.05 },
+    { t:"Three legally recognised certificates: WCAG 2.2, EN 301 549, and EAA readiness.", r:0.9, p:1.02 },
+    { t:"That's your legal protection, sorted.", r:0.98, p:1.1 },
+    { pause:500 },
+    { t:"We work with banks, government departments, media companies, and tech teams.", r:0.95, p:1.05 },
+    { t:"If you have a digital presence and people who use it — this is for you.", r:0.95, p:1.08 },
+    { pause:450 },
+    { t:"First call: thirty minutes, completely free.", r:1.02, p:1.15 },
+    { t:"You'll leave knowing exactly where you stand. Book it below!", r:1.05, p:1.18 }
+  ]
+};
+
+var mpMode = 'consumer';
+var mpSpeaking = false;
+var mpIdx = 0;
+var mpMouthTimer = null;
+var mpProgTimer = null;
+
+function mpSwitch(m) {
+  mpStop();
+  mpMode = m;
+  document.getElementById('mp-tab-consumer').classList.toggle('active', m === 'consumer');
+  document.getElementById('mp-tab-enterprise').classList.toggle('active', m === 'enterprise');
+  document.getElementById('mp-subtitle').textContent = 'Click play and I\'ll take it from here.';
+  document.getElementById('mp-progress').style.width = '0%';
+}
+
+function mpToggle() { mpSpeaking ? mpStop() : mpStart(); }
+
+function mpStart() {
+  if (!window.speechSynthesis) {
+    document.getElementById('mp-subtitle').textContent = 'Speech not supported — try Chrome or Safari.';
+    return;
+  }
+  window.speechSynthesis.cancel();
+  mpIdx = 0; mpSpeaking = true;
+  var pi = document.getElementById('mp-play-icon');
+  pi.innerHTML = '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>';
+  document.getElementById('mp-play-label').textContent = 'Pause';
+  mpMouthAnim(); mpProgressAnim(); mpNext();
+}
+
+function mpNext() {
+  var chunks = MP_SCRIPTS[mpMode];
+  if (!mpSpeaking || mpIdx >= chunks.length) { mpStop(); return; }
+  var c = chunks[mpIdx];
+  document.getElementById('mp-progress').style.width = Math.round((mpIdx / chunks.length) * 100) + '%';
+  if (c.pause) {
+    setTimeout(function() { mpIdx++; mpNext(); }, c.pause);
+    return;
+  }
+  if (c.t && c.t.trim()) document.getElementById('mp-subtitle').textContent = c.t;
+  var u = new SpeechSynthesisUtterance(c.t);
+  u.lang = 'en-GB'; u.rate = c.r || 1.0; u.pitch = c.p || 1.1;
+  var vv = window.speechSynthesis.getVoices();
+  var pick = vv.find(function(v) { return /samantha|karen|kate|victoria|fiona|moira/i.test(v.name); })
+    || vv.find(function(v) { return /en.GB/i.test(v.lang) && v.localService; })
+    || vv.find(function(v) { return /en/i.test(v.lang); });
+  if (pick) u.voice = pick;
+  u.onend = function() { mpIdx++; mpNext(); };
+  u.onerror = function() { mpIdx++; mpNext(); };
+  window.speechSynthesis.speak(u);
+}
+
+function mpMouthAnim() {
+  function tick() {
+    if (!mpSpeaking) { mpCloseMouth(); return; }
+    var o = Math.random() > 0.38;
+    document.getElementById('mp-mouth-open').setAttribute('opacity', o ? '1' : '0');
+    document.getElementById('mp-mouth-smile').setAttribute('opacity', o ? '0' : '1');
+    document.getElementById('mp-mouth-teeth').setAttribute('opacity', o ? '0.9' : '0');
+    document.getElementById('mp-brow-l').setAttribute('d', o ? 'M82 109 Q92 104 102 108' : 'M82 111 Q92 106 102 110');
+    document.getElementById('mp-brow-r').setAttribute('d', o ? 'M118 108 Q128 104 138 109' : 'M118 110 Q128 106 138 111');
+    mpMouthTimer = setTimeout(tick, 110 + Math.random() * 180);
+  }
+  tick();
+}
+
+function mpCloseMouth() {
+  clearTimeout(mpMouthTimer);
+  document.getElementById('mp-mouth-open').setAttribute('opacity', '0');
+  document.getElementById('mp-mouth-smile').setAttribute('opacity', '1');
+  document.getElementById('mp-mouth-teeth').setAttribute('opacity', '0');
+  document.getElementById('mp-brow-l').setAttribute('d', 'M82 111 Q92 106 102 110');
+  document.getElementById('mp-brow-r').setAttribute('d', 'M118 110 Q128 106 138 111');
+}
+
+function mpProgressAnim() {
+  var total = MP_SCRIPTS[mpMode].reduce(function(a, c) { return a + (c.pause ? c.pause / 1000 : (c.t ? c.t.length * 0.065 : 0)); }, 0);
+  var start = Date.now();
+  mpProgTimer = setInterval(function() {
+    var pct = Math.min(98, ((Date.now() - start) / 1000 / total) * 100);
+    document.getElementById('mp-progress').style.width = pct + '%';
+  }, 200);
+}
+
+function mpStop() {
+  mpSpeaking = false;
+  window.speechSynthesis && window.speechSynthesis.cancel();
+  clearTimeout(mpMouthTimer); clearInterval(mpProgTimer);
+  mpCloseMouth();
+  var pi = document.getElementById('mp-play-icon');
+  if (pi) pi.innerHTML = '<path d="M8 5v14l11-7z"/>';
+  var pl = document.getElementById('mp-play-label');
+  if (pl) pl.textContent = 'Play';
+  var pr = document.getElementById('mp-progress');
+  if (pr) pr.style.width = '0%';
+  var sub = document.getElementById('mp-subtitle');
+  if (sub) sub.textContent = 'Click play and I\'ll take it from here.';
+}
+
+window.speechSynthesis && window.speechSynthesis.getVoices();
+window.speechSynthesis && window.speechSynthesis.addEventListener('voiceschanged', function() {});
 </script>
 </body>
 </html>
